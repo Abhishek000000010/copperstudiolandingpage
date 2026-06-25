@@ -90,8 +90,21 @@
   .process-mobile-item {
     display: flex;
     gap: 20px;
+    position: relative;
+  }
+  .process-mobile-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 48px;
+    left: 23px;
+    width: 2px;
+    height: calc(100% + 40px - 48px);
+    background-color: #D0D0D0;
+    z-index: 1;
   }
   .process-mobile-num {
+    position: relative;
+    z-index: 2;
     width: 48px;
     height: 48px;
     flex-shrink: 0;
@@ -116,6 +129,7 @@
     margin: 0 0 8px 0;
     font-size: 20px;
     font-family: 'Inter', sans-serif;
+    color: #070815;
   }
   .process-mobile-content p {
     margin: 0;

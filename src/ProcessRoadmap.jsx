@@ -197,8 +197,14 @@ const ProcessRoadmap = () => {
         {/* Mobile view */}
         <div className="process-mobile-list">
           <h2 className="process-s-title">Process</h2>
-          {steps.map((step) => (
-            <div key={step.num} className="process-mobile-item">
+          {steps.map((step, i) => {
+            const isVisible = scrollProgress >= (i / steps.length) * 0.8;
+            return (
+            <div key={step.num} className="process-mobile-item" style={{
+                opacity: isVisible ? 1 : 0,
+                transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
+                transition: 'opacity 0.6s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
+              }}>
               <div className="process-mobile-num" style={{ backgroundColor: step.color }}>
                 {step.num}
               </div>
@@ -208,7 +214,8 @@ const ProcessRoadmap = () => {
                 <p>{step.desc}</p>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </section>
   );
