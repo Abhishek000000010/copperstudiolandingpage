@@ -180,6 +180,7 @@ function App() {
           <a href="#home" className="active">Home</a>
           <a href="#about">About</a>
           <a href="#services">Services</a>
+          <a href="#process">Process</a>
           <a href="#projects">Projects</a>
           <a href="#testimonials">Testimonials</a>
           <a href="#contact">Contact</a>
@@ -218,6 +219,7 @@ function App() {
           <a href="#home" onClick={toggleMobileMenu}>Home</a>
           <a href="#about" onClick={toggleMobileMenu}>About</a>
           <a href="#services" onClick={toggleMobileMenu}>Services</a>
+          <a href="#process" onClick={toggleMobileMenu}>Process</a>
           <a href="#projects" onClick={toggleMobileMenu}>Projects</a>
           <a href="#testimonials" onClick={toggleMobileMenu}>Testimonials</a>
           <a href="#contact" onClick={toggleMobileMenu}>Contact</a>
