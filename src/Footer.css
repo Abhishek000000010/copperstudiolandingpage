@@ -138,8 +138,8 @@
 .marquee-content {
   display: flex;
   width: max-content;
-  /* Adjust the 15s down if you want it faster, up if you want it slower */
-  animation: marqueeScroll 15s linear infinite;
+  /* Adjust the 25s down if you want it faster, up if you want it slower */
+  animation: marqueeScroll 25s linear infinite;
   will-change: transform;
 }
 
