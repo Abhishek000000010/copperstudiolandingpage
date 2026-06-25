@@ -97,12 +97,10 @@ const Booking = () => {
             <p className="booking-signoff">Talk to you soon.</p>
           </div>
 
-          {/* RIGHT — Calendly scheduler */}
           <div className="booking-widget">
             <div
               id="calendly-inline-container"
               className="calendly-inline-widget-wrapper"
-              style={{ minWidth: '300px', height: '700px' }}
             ></div>
           </div>
         </div>

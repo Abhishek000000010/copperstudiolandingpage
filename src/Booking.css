@@ -197,7 +197,8 @@
   background: #FFFFFF;
   border-radius: 18px;
   overflow: hidden;
-  height: 100%;
+  height: 700px;
+  min-width: 300px;
 }
 
 /* ===========================
@@ -219,6 +220,10 @@
 @media (max-width: 768px) {
   .booking-section {
     padding: 80px 16px;
+  }
+  
+  .calendly-inline-widget-wrapper {
+    height: 540px; /* Reduced height on mobile to eliminate bottom gap */
   }
 }
 
