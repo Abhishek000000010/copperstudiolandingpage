@@ -1,6 +1,6 @@
 .projects-section {
   width: 100%;
-  padding: 0 0 20px 0;
+  padding: 0 0 32px 0;
   background-color: #FFFFFF;
 }
 
@@ -24,6 +24,8 @@
   position: absolute;
   inset: 0;
   z-index: 1;
+  padding: 0 40px;
+  box-sizing: border-box;
 }
 
 .projects-glass-wrapper {
@@ -35,7 +37,8 @@
   z-index: 2;
   width: 100%;
   max-width: 1440px;
-  /* Removed outer background and blur, now just a layout container */
+  padding: 0 40px;
+  box-sizing: border-box;
   will-change: transform;
 }
 
@@ -50,11 +53,11 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
   width: 100%;
   max-width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 42px;
 }
 
 .project-card {
@@ -62,7 +65,7 @@
   opacity: 0;
   transform: translateY(180px);
   will-change: transform, opacity;
-  aspect-ratio: 1.1 / 1;
+  aspect-ratio: 1.06 / 1;
   position: relative;
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(0,0,0,0.1);
@@ -99,8 +102,8 @@
 .project-card-content {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 30px;
+  gap: 10px;
+  padding: 28px;
   position: relative;
   z-index: 2;
   margin-top: auto;
@@ -110,14 +113,16 @@
 .project-card-title {
   font-family: 'DM Sans', sans-serif;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 26px;
   color: #FFFFFF;
   margin: 0;
+  line-height: 1.12;
 }
 
 .project-card-subtitle {
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
+  line-height: 1.45;
   color: rgba(255, 255, 255, 0.8);
   margin: 0 0 8px 0;
 }
@@ -156,6 +161,7 @@
   background-color: transparent;
   opacity: 0;
   transform: translateY(60px);
+  text-decoration: none;
 }
 
 .view-more-btn .arrow-icon {
@@ -247,78 +253,510 @@
   color: #FFFFFF;
 }
 
-@media (max-width: 900px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-    max-width: 500px;
-    margin: 0 auto 50px auto;
+
+/* ==========================================================
+   Tablet (<=1024px)
+========================================================== */
+@media (max-width: 1024px) {
+
+  /* --------------------------------
+     Main Container
+  -------------------------------- */
+  .projects-section .global-container {
+    padding: 0 32px;
   }
+
+  .projects-header-wrapper {
+    padding: 0 32px;
+  }
+
   .projects-glass-wrapper {
-    padding: 40px 20px;
-    box-sizing: border-box; /* keep the side padding inside the 100% width */
+    padding: 0 32px;
+    box-sizing: border-box;
+  }
+
+  /* --------------------------------
+     Header & Spacing
+  -------------------------------- */
+  /* Centered vertical header alignment preserved from desktop */
+
+  .projects-header-wrapper .section-title {
+    font-size: clamp(42px, 4.8vw, 48px);
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .global-cursive-svg-container {
+    margin-top: clamp(-70px, -6vw, -50px);
+    margin-bottom: 0;
+  }
+
+  .global-cursive-svg {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    aspect-ratio: 4 / 1;
+  }
+
+  /* --------------------------------
+     Projects Grid
+  -------------------------------- */
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: none;
+    margin: 0 0 38px 0;
+    gap: 24px;
+  }
+
+  /* --------------------------------
+     Project Cards
+  -------------------------------- */
+  .project-card-content {
+    padding: 22px;
+  }
+
+  .project-card-title {
+    font-size: clamp(22px, 2.5vw, 24px);
+  }
+
+  .project-card-subtitle {
+    font-size: 13.5px;
+  }
+
+  /* --------------------------------
+     View More Button
+  -------------------------------- */
+  .view-more-btn {
+    font-size: 15px;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  /* --------------------------------
+     SVG Modal
+  -------------------------------- */
+  .project-svg-modal-overlay {
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 36px 32px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  .project-svg-modal-content {
+    width: min(92vw, 880px);
+    max-width: 880px;
+    min-height: calc(100vh - 72px);
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+  }
+
+  .project-svg-full {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 14px;
+    box-shadow: 0 28px 56px rgba(0, 0, 0, 0.34);
+  }
+
+  .project-svg-modal-close {
+    top: 18px;
+    right: 18px;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+  .section-subtitle {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto 50px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
   }
 }
 
-/* ============================================================
-   MOBILE RESPONSIVE REFINEMENTS (added — desktop untouched)
-   ============================================================ */
+
+/* ==========================================================
+   Tablet / Mobile (<=768px)
+========================================================== */
 @media (max-width: 768px) {
+
+  /* --------------------------------
+     Main Container
+  -------------------------------- */
   .projects-section .global-container {
     padding: 0 20px;
   }
-  /* The title wraps to multiple lines on mobile; centre it so it stays
-     balanced under the centered "Projects" script (desktop is a single
-     line, so this only affects the wrapped mobile layout). */
+
+  /* --------------------------------
+     Header & Spacing
+  -------------------------------- */
   .projects-header-wrapper {
     padding: 0 20px;
   }
+
+  .projects-glass-wrapper {
+    padding: 0 20px;
+  }
+
   .projects-header-wrapper .section-title {
+    font-size: clamp(34px, 5vw, 40px);
     text-align: center;
+    margin-bottom: 10px;
   }
-  .cursive-accent {
-    font-size: 90px;
-    margin-top: -50px;
+
+  .global-cursive-svg-container {
+    margin-top: clamp(-50px, -5vw, -35px);
+    margin-bottom: 0;
   }
-  .project-card-title {
-    font-size: 24px;
+
+  .global-cursive-svg {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    aspect-ratio: 4 / 1;
   }
+
+  /* --------------------------------
+     Projects Grid
+  -------------------------------- */
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  /* --------------------------------
+     Project Cards
+  -------------------------------- */
+  .project-card {
+    border-radius: 22px;
+  }
+
   .project-card-content {
-    padding: 22px;
+    padding: 18px;
     gap: 6px;
   }
+
+  .project-card-title {
+    font-size: clamp(18px, 2.9vw, 21px);
+  }
+
   .project-card-subtitle {
-    font-size: 13px;
+    font-size: 12.5px;
     margin-bottom: 4px;
   }
-  /* Smaller pills so the longer tag sets pack into 2 rows instead of a
-     tall one-per-row stack that crowds the card. */
+
+  /* --------------------------------
+     Project Tags
+  -------------------------------- */
   .project-tags {
     gap: 6px;
   }
+
   .project-tag {
     font-size: 11px;
-    padding: 5px 10px;
+    padding: 5px 9px;
   }
-  /* Keep the See More button a comfortable touch target */
+
+  /* --------------------------------
+     View More Button
+  -------------------------------- */
   .view-more-btn {
-    padding: 16px 0;
+    max-width: 320px;
+    padding: 14px 0;
+    font-size: 14.5px;
   }
-  /* Modal fits small screens; close button stays 44px+ tappable */
+
+  /* --------------------------------
+     SVG Modal
+  -------------------------------- */
   .project-svg-modal-overlay {
-    padding: 20px 12px;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 32px 24px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
   }
+
+  .project-svg-modal-content {
+    width: min(93vw, 680px);
+    max-width: 680px;
+    min-height: calc(100vh - 64px);
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+  }
+
   .project-svg-modal-close {
     top: 12px;
     right: 12px;
     width: 44px;
     height: 44px;
   }
-}
 
-@media (max-width: 380px) {
-  /* Keep the long "Testimonial" / "Projects" script accents on-screen */
-  .cursive-accent {
-    font-size: 68px;
-    margin-top: -38px;
+  .project-svg-full {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 13px;
+    box-shadow: 0 24px 46px rgba(0, 0, 0, 0.3);
+  }
+
+  .section-subtitle {
+    max-width: 90%;
+    width: 100%;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+
+  .desktop-break {
+    display: none;
   }
 }
+
+
+/* ==========================================================
+   Mobile (<=576px)
+========================================================== */
+@media (max-width: 576px) {
+
+  /* --------------------------------
+     Main Container
+  -------------------------------- */
+  .projects-section .global-container {
+    padding: 0 16px;
+  }
+
+  .projects-header-wrapper {
+    padding: 0 16px;
+  }
+
+  .projects-glass-wrapper {
+    padding: 0 16px;
+  }
+
+  /* --------------------------------
+     Header & Spacing
+  -------------------------------- */
+  /* Centered vertical header alignment preserved from desktop */
+
+  .projects-header-wrapper .section-title {
+    font-size: clamp(28px, 6vw, 32px);
+    line-height: 1.25;
+    margin-bottom: 8px;
+  }
+
+  .global-cursive-svg-container {
+    margin-top: clamp(-40px, -6vw, -25px);
+  }
+
+  .global-cursive-svg {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    aspect-ratio: 4 / 1;
+  }
+
+  /* --------------------------------
+     Projects Grid
+  -------------------------------- */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* --------------------------------
+     Project Cards
+  -------------------------------- */
+  .project-card {
+    border-radius: 20px;
+  }
+
+  .project-card-content {
+    padding: 20px;
+  }
+
+  .project-card-title {
+    font-size: clamp(20px, 4.4vw, 22px);
+  }
+
+  .project-card-subtitle {
+    font-size: 13px;
+  }
+
+  /* --------------------------------
+     Tags
+  -------------------------------- */
+  .project-tag {
+    font-size: 10.5px;
+    padding: 4px 9px;
+  }
+
+  /* --------------------------------
+     View More Button
+  -------------------------------- */
+  .view-more-btn {
+    font-size: 14px;
+    padding: 14px 0;
+  }
+
+  /* --------------------------------
+     SVG Modal
+  -------------------------------- */
+  .project-svg-modal-overlay {
+    align-items: flex-start;
+    padding: 24px 16px 28px;
+    scroll-behavior: smooth;
+  }
+
+  .project-svg-modal-content {
+    width: min(92vw, 100%);
+    max-width: 92vw;
+    min-height: auto;
+    margin: 0 auto;
+    justify-content: flex-start;
+  }
+
+  .project-svg-modal-close {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .project-svg-full {
+    border-radius: 12px;
+    box-shadow: 0 22px 40px rgba(0, 0, 0, 0.26);
+  }
+
+  .desktop-break {
+    display: none;
+  }
+}
+
+
+/* ==========================================================
+   Small Mobile (<=400px)
+========================================================== */
+@media (max-width: 400px) {
+
+  /* --------------------------------
+     Main Container
+  -------------------------------- */
+  .projects-section .global-container {
+    padding: 0 12px;
+  }
+
+  .projects-header-wrapper {
+    padding: 0 12px;
+  }
+
+  .projects-glass-wrapper {
+    padding: 0 12px;
+  }
+
+  /* --------------------------------
+     Header & Spacing
+  -------------------------------- */
+  /* Centered vertical header alignment preserved from desktop */
+
+  .projects-header-wrapper .section-title {
+    font-size: clamp(24px, 6vw, 26px);
+    margin-bottom: 6px;
+  }
+
+  .global-cursive-svg-container {
+    margin-top: clamp(-30px, -5vw, -20px);
+  }
+
+  .global-cursive-svg {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    aspect-ratio: 4 / 1;
+  }
+
+  /* --------------------------------
+     Project Cards
+  -------------------------------- */
+  .project-card {
+    border-radius: 18px;
+  }
+
+  .project-card-content {
+    padding: 16px;
+  }
+
+  .project-card-title {
+    font-size: clamp(18px, 4.8vw, 19px);
+  }
+
+  .project-card-subtitle {
+    font-size: 12px;
+  }
+
+  /* --------------------------------
+     Tags
+  -------------------------------- */
+  .project-tag {
+    font-size: 10px;
+    padding: 4px 7px;
+  }
+
+  /* --------------------------------
+     View More Button
+  -------------------------------- */
+  .view-more-btn {
+    font-size: 13px;
+    padding: 12px 0;
+  }
+
+  /* --------------------------------
+     SVG Modal
+  -------------------------------- */
+  .project-svg-modal-overlay {
+    align-items: flex-start;
+    padding: 22px 12px 26px;
+    scroll-behavior: smooth;
+  }
+
+  .project-svg-modal-content {
+    width: min(93vw, 100%);
+    max-width: 93vw;
+    min-height: auto;
+    margin: 0 auto;
+    justify-content: flex-start;
+  }
+
+  .project-svg-modal-close {
+    top: 8px;
+    right: 8px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .project-svg-full {
+    border-radius: 11px;
+    box-shadow: 0 20px 34px rgba(0, 0, 0, 0.24);
+  }
+
+  .desktop-break {
+    display: none;
+  }
+} 

@@ -14,6 +14,7 @@
   margin: 0 0 16px 0;
   letter-spacing: -1.5px;
   text-align: center;
+  line-height: 1.08;
 }
 
 .pricing-header-text {
@@ -36,7 +37,7 @@
   font-size: 18px;
   font-weight: 400;
   color: #666;
-  max-width: 100%;
+  max-width: 920px;
   margin: 0 0 60px 0;
   line-height: 1.6;
 }
@@ -44,14 +45,14 @@
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 32px;
+  gap: 28px;
   width: 100%;
   align-items: stretch;
 }
 
 .pricing-card {
   border-radius: 40px;
-  padding: 48px 36px;
+  padding: 44px 32px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -110,8 +111,8 @@
 }
 
 .pricing-card-header {
-  margin-bottom: 24px;
-  padding-bottom: 24px;
+  margin-bottom: 22px;
+  padding-bottom: 22px;
   border-bottom: 1px solid #E7E6E3;
 }
 
@@ -129,11 +130,12 @@
   line-height: 1.5;
   color: #4A4A4A;
   margin: 0;
+  min-height: 81px;
 }
 
 .pricing-card-body {
   flex-grow: 1;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .features-title {
@@ -174,7 +176,7 @@
   font-size: 18px;
   font-weight: 600;
   color: #1A1A1A;
-  line-height: 1.4;
+  line-height: 1.5;
   min-width: 0;
   overflow-wrap: break-word;
 }
@@ -203,7 +205,7 @@
 .subitem-text {
   font-size: 18px;
   color: #666666;
-  line-height: 1.4;
+  line-height: 1.5;
   min-width: 0;
   overflow-wrap: break-word;
 }
@@ -240,18 +242,49 @@
 }
 
 @media (max-width: 1024px) {
+  .pricing-section .global-container {
+    padding: 0 32px;
+  }
+  .pricing-title {
+    font-size: 48px;
+  }
+  .pricing-subtitle {
+    font-size: 17px;
+    max-width: 760px;
+  }
   .pricing-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+  .pricing-card {
+    padding: 38px 26px;
+  }
+  .plan-desc {
+    min-height: 0;
+    font-size: 17px;
+  }
+  .feature-text,
+  .subitem-text {
+    font-size: 16px;
+  }
+  .custom-plan-banner {
+    padding: 34px 32px;
+  }
+  .custom-plan-title {
+    font-size: 28px;
   }
 }
 
 @media (max-width: 768px) {
+  .pricing-section .global-container {
+    padding: 0 24px;
+  }
   .pricing-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
   }
   .pricing-card {
-    padding: 36px 24px;
+    padding: 34px 24px;
   }
 }
 
@@ -260,7 +293,7 @@
   background: #F0EDE4;
   border: 0.5px solid #C55418;
   border-radius: 40px;
-  padding: 40px;
+  padding: 40px 44px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -322,7 +355,7 @@
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
   font-size: 18px;
-  line-height: 23px;
+  line-height: 1.6;
   color: #504F4F;
   margin: 0;
 }
@@ -368,7 +401,7 @@
    ============================================================ */
 @media (max-width: 768px) {
   .pricing-section .global-container {
-    padding: 0 20px;
+    padding: 0 24px;
   }
   /* minmax(0,..) lets the single column shrink below its content's
      intrinsic min-width instead of forcing the card to overflow */
@@ -406,5 +439,60 @@
   }
   .custom-plan-desc {
     font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .pricing-section .global-container {
+    padding: 0 16px;
+  }
+  .pricing-title {
+    font-size: 34px;
+  }
+  .pricing-subtitle-italic {
+    font-size: 16px;
+  }
+  .pricing-subtitle {
+    font-size: 15px;
+  }
+  .pricing-card {
+    padding: 28px 18px;
+  }
+  .plan-name {
+    font-size: 24px;
+  }
+  .plan-desc,
+  .feature-text,
+  .subitem-text {
+    font-size: 15px;
+  }
+  .custom-plan-banner {
+    padding: 24px 20px;
+    border-radius: 28px;
+  }
+}
+
+@media (max-width: 400px) {
+  .pricing-section .global-container {
+    padding: 0 12px;
+  }
+  .pricing-title {
+    font-size: 28px;
+  }
+  .pricing-card {
+    padding: 24px 16px;
+    border-radius: 28px;
+  }
+  .pricing-card::before,
+  .popular-banner {
+    border-radius: 28px;
+  }
+  .plan-name {
+    font-size: 22px;
+  }
+  .pricing-cta-btn,
+  .custom-plan-btn {
+    height: 48px;
+    font-size: 16px;
   }
 }

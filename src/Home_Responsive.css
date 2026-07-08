@@ -1,0 +1,351 @@
+
+
+/* ==========================================================
+   App.css Responsive Overrides
+========================================================== */
+
+/* @media (max-width: 992px) */
+@media (max-width: 992px) {
+  /* ------------------------------
+     Navigation
+  ------------------------------ */
+  .navbar {
+    width: calc(100% - 40px);
+    max-width: 912px;
+    top: 16px;
+    padding: 10px 20px;
+    border-radius: 14px;
+    justify-content: space-between;
+  }
+
+  /* ------------------------------
+     Hero Section
+  ------------------------------ */
+  .landing-container {
+    width: calc(100% - 32px);
+    height: calc(100vh - 32px);
+    border-radius: 20px;
+  }
+
+  .main-center-logo {
+    width: 70vw;
+    max-width: 700px;
+    min-width: 280px;
+  }
+
+  .blobs-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ellipse {
+    transform: scale(1.2);
+  }
+
+  /* ------------------------------
+     Hero Subtitle
+  ------------------------------ */
+  .hero-subtitle {
+    top: calc(100% + 40px);
+    width: 85%;
+    font-size: 17px;
+  }
+
+  /* ------------------------------
+     Hero Buttons
+  ------------------------------ */
+  .bottom-bar {
+    padding: 24px 0;
+  }
+
+  /* ------------------------------
+     Global Cursive SVG
+  ------------------------------ */
+  .global-cursive-svg-container {
+    margin-top: -60px;
+  }
+
+  .global-cursive-svg {
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+  }
+}
+
+/* @media (max-width: 768px) */
+@media (max-width: 768px) {
+  /* ------------------------------
+     Navigation
+  ------------------------------ */
+  .navbar {
+    width: calc(100% - 32px);
+    top: 12px;
+    padding: 8px 16px;
+    height: 56px;
+    border-radius: 12px;
+  }
+
+  .nav-logo-icon {
+    height: 32px;
+  }
+
+  /* ------------------------------
+     Mobile Navigation
+  ------------------------------ */
+  .mobile-menu-overlay {
+    height: 100svh;
+  }
+
+  /* ------------------------------
+     Hero Section
+  ------------------------------ */
+  .landing-container {
+    width: calc(100% - 24px);
+    height: calc(100svh - 24px);
+    border-radius: 16px;
+  }
+
+  .main-center-logo {
+    width: 80vw;
+    min-width: 250px;
+  }
+
+  .ellipse {
+    transform: scale(1.0);
+  }
+
+  /* ------------------------------
+     Hero Subtitle
+  ------------------------------ */
+  .hero-subtitle {
+    top: calc(100% + 30px);
+    width: 90%;
+    font-size: 15px;
+  }
+
+  /* ------------------------------
+     Hero Buttons
+  ------------------------------ */
+  .bottom-bar {
+    bottom: 12px;
+    padding: 20px 0;
+  }
+
+  .bottom-bar-inner {
+    justify-content: center;
+  }
+
+  .scroll-text,
+  .copyright {
+    display: none !important;
+  }
+
+  .bottom-center-pill {
+    padding: 8px 8px 8px 16px;
+    gap: 8px;
+  }
+
+  /* ------------------------------
+     Global Cursive SVG
+  ------------------------------ */
+  .global-cursive-svg-container {
+    margin-top: -45px;
+  }
+
+  .global-cursive-svg {
+    width: 95%;
+    max-width: 480px;
+  }
+}
+
+/* @media (max-width: 576px) */
+@media (max-width: 576px) {
+  /* ------------------------------
+     Navigation
+  ------------------------------ */
+  .navbar {
+    width: calc(100% - 24px);
+    top: 10px;
+    padding: 6px 12px;
+    height: 50px;
+    border-radius: 10px;
+  }
+
+  .nav-logo-icon {
+    height: 28px;
+  }
+
+  /* ------------------------------
+     Mobile Navigation
+  ------------------------------ */
+  .mobile-nav-links a:not(.mobile-client-portal) {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .mobile-nav-links a.mobile-client-portal,
+  .lets-talk-btn.mobile-lets-talk {
+    min-height: 48px;
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+
+  /* ------------------------------
+     Hero Section
+  ------------------------------ */
+  .landing-container {
+    width: calc(100% - 16px);
+    height: calc(100svh - 16px);
+    border-radius: 12px;
+  }
+
+  .main-center-logo {
+    width: 85vw;
+    min-width: 220px;
+  }
+
+  .ellipse {
+    transform: scale(0.8);
+  }
+
+  /* ------------------------------
+     Hero Subtitle
+  ------------------------------ */
+  .hero-subtitle {
+    top: calc(100% + 20px);
+    width: 92%;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* ------------------------------
+     Hero Buttons
+  ------------------------------ */
+  .bottom-bar {
+    padding: 16px 0;
+  }
+
+  .bottom-center-pill {
+    transform: scale(0.9);
+  }
+
+  .view-projects-btn,
+  .lets-talk-dark-btn {
+    font-size: 12px;
+  }
+
+  /* ------------------------------
+     Global Cursive SVG
+  ------------------------------ */
+  .global-cursive-svg-container {
+    margin-top: -30px;
+  }
+
+  .global-cursive-svg {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+/* @media (max-width: 400px) */
+@media (max-width: 400px) {
+  /* ------------------------------
+     Navigation
+  ------------------------------ */
+  .navbar {
+    width: calc(100% - 16px);
+    top: 8px;
+    padding: 6px 10px;
+    height: 48px;
+    border-radius: 8px;
+  }
+
+  .nav-logo-icon {
+    height: 26px;
+  }
+
+  /* ------------------------------
+     Mobile Navigation
+  ------------------------------ */
+  .mobile-nav-links a:not(.mobile-client-portal) {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .mobile-nav-links a.mobile-client-portal {
+    min-height: 44px;
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  .lets-talk-btn.mobile-lets-talk {
+    min-height: 44px;
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  /* ------------------------------
+     Hero Section
+  ------------------------------ */
+  .landing-container {
+    width: calc(100% - 12px);
+    height: calc(100svh - 12px);
+    border-radius: 10px;
+  }
+
+  .main-center-logo {
+    width: 90vw;
+    min-width: 0;
+  }
+
+  /* ------------------------------
+     Hero Subtitle
+  ------------------------------ */
+  .hero-subtitle {
+    top: calc(100% + 15px);
+    width: 95%;
+    font-size: 12.5px;
+    line-height: 1.4;
+  }
+
+  /* ------------------------------
+     Hero Buttons
+  ------------------------------ */
+  .bottom-bar {
+    padding: 12px 0;
+  }
+
+  .bottom-center-pill {
+    padding: 4px 4px 4px 12px;
+    gap: 6px;
+    transform: scale(0.85);
+  }
+
+  .view-projects-btn,
+  .lets-talk-dark-btn {
+    font-size: 11px;
+  }
+
+  .view-projects-btn {
+    padding: 6px 2px;
+  }
+
+  .lets-talk-dark-btn {
+    padding: 6px 12px;
+    gap: 4px;
+  }
+
+  /* ------------------------------
+     Global Cursive SVG
+  ------------------------------ */
+  .global-cursive-svg-container {
+    margin-top: -20px;
+  }
+
+  .global-cursive-svg {
+    width: 100%;
+    max-width: 290px;
+  }
+}

@@ -14,6 +14,7 @@ img, video {
 .landing-container {
   width: calc(100% - 32px);
   height: calc(100vh - 32px);
+  min-height: 760px;
   position: relative;
   background: #070815;
   overflow: hidden;
@@ -27,8 +28,8 @@ img, video {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: 1;
 }
 
@@ -92,8 +93,8 @@ img, video {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: 2;
   opacity: 0.4;
   display: flex;
@@ -161,12 +162,15 @@ img, video {
   align-items: center;
   justify-content: center;
   user-select: none;
+  width: min(100%, 1120px);
+  padding: 0 40px;
+  box-sizing: border-box;
 }
 
 .main-center-logo {
   display: block;
-  width: 60vw;
-  max-width: 900px;
+  width: min(100%, 900px);
+  max-width: 100%;
   min-width: 300px;
   height: auto;
   object-fit: contain;
@@ -175,22 +179,21 @@ img, video {
 
 .hero-subtitle {
   position: absolute;
-  top: calc(100% + 16vh); /* Position it far below the centered logo */
+  top: calc(100% + 60px);
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
-  margin-top: 0;
-  
-  color: rgba(255, 255, 255, 0.85);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  text-align: center;
-  max-width: 600px;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-}
 
+  width: min(90%, 600px);
+
+  color: rgba(255,255,255,.85);
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(15px, 2vw, 18px);
+  font-weight: 400;
+  letter-spacing: .5px;
+  text-align: center;
+  line-height: 1.7;
+  margin: 0;
+}
 .hero-subtitle i {
   font-style: italic;
   font-family: 'DM Sans', sans-serif;
@@ -205,7 +208,7 @@ img, video {
 /* --- Navigation Bar --- */
 .navbar {
   position: fixed;
-  top: 0;
+  top: 16px;
   left: 50%;
   transform: translateX(-50%);
   background: #FFFFFF;
@@ -334,7 +337,7 @@ img, video {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 30px 0; /* Horizontal padding removed, handled by global-section */
+  padding: 24px 0 30px 0; /* Horizontal padding removed, handled by global-section */
   z-index: 50;
   box-sizing: border-box;
   pointer-events: none;
@@ -344,6 +347,7 @@ img, video {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  gap: 24px;
 }
 
 .scroll-text, .copyright {
@@ -425,8 +429,42 @@ img, video {
 }
 
 @media (max-width: 1024px) {
+  .navbar {
+    width: calc(100% - 48px);
+    max-width: 980px;
+    padding: 10px 18px;
+    gap: 14px;
+  }
   .nav-links {
-    display: none;
+    flex: 1 1 auto;
+    width: auto;
+    min-width: 0;
+  }
+  .nav-action {
+    flex-shrink: 0;
+  }
+  .landing-container {
+    min-height: 700px;
+  }
+  .logo-container {
+    width: min(100%, 980px);
+    padding: 0 32px;
+    transform: translateY(36px);
+  }
+  .main-center-logo {
+    width: min(64vw, 760px);
+    min-width: 280px;
+  }
+  .hero-subtitle {
+    top: calc(100% + 68px);
+    width: min(90%, 540px);
+    font-size: 16px;
+  }
+  .bottom-bar {
+    padding: 24px 0 24px 0;
+  }
+  .bottom-bar-inner {
+    gap: 18px;
   }
 }
 
@@ -783,25 +821,57 @@ img, video {
   }
 
   .navbar {
-    padding: 12px 16px;
-    gap: 16px;
+    padding: 10px 16px;
+    gap: 12px;
     width: calc(100% - 32px); /* So it doesn't overflow */
     border-radius: 12px;
-    top: 16px;
+    top: 12px;
+    height: 56px;
   }
   
   .lets-talk-btn {
     padding: 8px 14px;
     font-size: 12px;
   }
+  .landing-container {
+    width: calc(100% - 24px);
+    height: calc(100svh - 24px);
+    min-height: 640px;
+    border-radius: 20px;
+  }
+  .logo-container {
+    width: min(100%, 760px);
+    padding: 0 28px;
+    transform: translateY(30px);
+  }
+  .main-center-logo {
+    width: min(78vw, 620px);
+    min-width: 0;
+  }
+  .logo-container {
+    transform: translateY(42px);
+  }
+  .hero-subtitle {
+    top: calc(100% + 78px);
+    width: min(90%, 520px);
+    font-size: 16px;
+    line-height: 1.65;
+  }
   
   .bottom-bar {
-    padding-bottom: 20px;
-    justify-content: center;
+    padding: 22px 0 20px 0;
   }
   
   .scroll-text, .copyright {
     display: none;
+  }
+  .bottom-bar-inner {
+    justify-content: center;
+    align-items: center;
+  }
+  .bottom-center-pill {
+    gap: 10px;
+    padding: 8px 8px 8px 18px;
   }
   
   .trusted-section {
@@ -829,41 +899,56 @@ img, video {
    stay fully visible under the mobile browser chrome. */
 @media (max-width: 768px) {
   .landing-container {
-    height: calc(100svh - 32px);
+    height: calc(100svh - 24px);
   }
 }
 
 @media (max-width: 640px) {
-  /* min-width:300px could clip on <320px screens; let it scale fully */
+  .navbar {
+    width: calc(100% - 24px);
+    padding: 8px 14px;
+    gap: 10px;
+    height: 52px;
+  }
+  .landing-container {
+    width: calc(100% - 16px);
+    height: calc(100svh - 16px);
+    min-height: 560px;
+    border-radius: 16px;
+  }
   .main-center-logo {
     min-width: 0;
-    width: 82vw;
+    width: min(84vw, 520px);
   }
 
-  /* Scoped to the landing hero so the Studio hero subtitle is untouched.
-     Keep the desktop 16vh drop below the logo (inherited) so the spacing
-     matches desktop; only constrain width/size for small screens. */
+  .logo-container {
+    transform: translateY(34px);
+  }
+
   .logo-container .hero-subtitle {
-    font-size: 15px;
-    padding: 0 24px;
+    top: calc(100% + 230px);
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 0 20px;
     max-width: 92vw;
     box-sizing: border-box;
   }
 
-  /* scroll-text + copyright are hidden on mobile, so centre the pill */
   .bottom-bar-inner {
     justify-content: center;
   }
   .bottom-center-pill {
-    padding: 8px 8px 8px 16px;
-    gap: 8px;
+    width: min(100%, 320px);
+    justify-content: space-between;
+    padding: 8px 10px 8px 14px;
+    gap: 6px;
   }
   .view-projects-btn {
     font-size: 12px;
-    padding: 12px 6px;
+    padding: 10px 4px;
   }
   .lets-talk-dark-btn {
-    padding: 12px 16px;
+    padding: 10px 14px;
     font-size: 12px;
   }
 }
@@ -871,8 +956,11 @@ img, video {
 /* On very short screens (e.g. iPhone SE) the desktop 16vh drop would push
    the subtitle into the bottom pill, so pull it up just enough to clear. */
 @media (max-width: 640px) and (max-height: 640px) {
+  .logo-container {
+    transform: translateY(18px);
+  }
   .logo-container .hero-subtitle {
-    top: calc(100% + 6vh);
+    top: calc(100% + 28px);
   }
 }
 

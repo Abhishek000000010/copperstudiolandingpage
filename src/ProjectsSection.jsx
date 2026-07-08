@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './ProjectsSection.css';
 import commonGroundsImg from './assets/common-grounds.jpg';
 import dataCirclesImg from './assets/DataCirclesLaptop.png';
@@ -191,9 +192,9 @@ export default function ProjectsSection() {
             ))}
           </div>
 
-          <div className="view-more-btn">
+          <Link to="/projects" className="view-more-btn">
             See More Projects <span className="arrow-icon">&rsaquo;</span>
-          </div>
+          </Link>
         </div>
 
       </div>

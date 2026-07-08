@@ -1,6 +1,6 @@
 .coordinate-section {
   width: 100%;
-  padding: 0 0 120px 0;
+  padding: 0 0 100px 0;
   background-color: #FFFFFF;
 }
 
@@ -22,6 +22,8 @@
   font-size: 56px;
   color: #070815;
   margin: 0 0 20px 0;
+  line-height: 1.12;
+  text-align: center;
 }
 
 .section-subtitle {
@@ -29,8 +31,8 @@
   font-weight: 300;
   font-size: 18px;
   color: #504F4F;
-  max-width: 100%;
-  margin: 0 0 60px 0;
+  max-width: 920px;
+  margin: 0 0 56px 0;
   line-height: 1.6;
 }
 
@@ -45,8 +47,8 @@
 .coordinate-video-box {
   display: block;
   width: 100%;
-  max-width: 900px; /* Increased slightly from 760px */
-  aspect-ratio: 1.55; /* Keeps the exact same cropping on the sides */
+  max-width: 960px;
+  aspect-ratio: 1.55;
   height: auto;
   border-radius: 25px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.1);
@@ -66,18 +68,115 @@
 /* ============================================================
    MOBILE RESPONSIVE REFINEMENTS (added — desktop untouched)
    ============================================================ */
+/* ==========================================================
+   Tablet / Mobile (<=768px)
+========================================================== */
+@media (max-width: 1024px) {
+  .coordinate-section {
+    padding-bottom: 88px;
+  }
+
+  .coordinate-section .global-container {
+    padding: 0 32px;
+  }
+
+  .section-title {
+    font-size: 48px;
+    line-height: 1.15;
+    margin-bottom: 18px;
+  }
+
+  .section-subtitle {
+    max-width: 760px;
+    margin: 0 0 48px 0;
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .coordinate-video-box {
+    max-width: 860px;
+    border-radius: 22px;
+  }
+}
+
 @media (max-width: 768px) {
+
   .coordinate-section {
     padding-bottom: 80px;
   }
+
   .coordinate-section .global-container {
-    padding: 0 20px;
+    padding: 0 24px;
   }
+
   .section-title {
-    font-size: 34px;
-    line-height: 1.15;
+    font-size: 40px;
+    line-height: 1.18;
+    text-align: center;
+    margin-bottom: 18px;
   }
+
   .section-subtitle {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto 40px;
+    font-size: 16px;
+    line-height: 1.75;
+    text-align: center;
+  }
+
+  .subtitle-italic {
+    display: block;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .coordinate-video-box {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 20px;
+  }
+
+}
+@media (max-width: 576px) {
+
+  .coordinate-section .global-container {
+    padding: 0 16px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .section-subtitle {
+    max-width: 100%;
     font-size: 15px;
-    margin-bottom: 40px;
-}}
+    line-height: 1.75;
+    margin-bottom: 30px;
+  }
+
+  .subtitle-italic {
+    margin-bottom: 10px;
+  }
+
+  .coordinate-video-box {
+    border-radius: 16px;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .coordinate-section .global-container {
+    padding: 0 12px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .section-subtitle {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+}
+

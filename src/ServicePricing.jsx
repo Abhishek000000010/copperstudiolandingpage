@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Pricing.css';
 import './ServicePricing.css';
 import { pricingServices } from './pricingData';
@@ -88,7 +89,7 @@ const ServicePricing = ({ activeService, onServiceChange, showToggle = true, hid
               </div>
 
               <div className="pricing-card-footer">
-                <button className="pricing-cta-btn">{plan.cta}</button>
+                <Link to="/contact" className="pricing-cta-btn">{plan.cta}</Link>
               </div>
             </div>
           ))}
@@ -106,7 +107,7 @@ const ServicePricing = ({ activeService, onServiceChange, showToggle = true, hid
                 Not every brand fits into a package. If you're looking for specific services, have custom requirements, or need support for a particular project, we'll build a solution designed around your goals.
               </p>
             </div>
-            <button className="custom-plan-btn">Book A Meeting</button>
+            <Link to="/contact" className="custom-plan-btn">Book A Meeting</Link>
           </div>
         )}
       </div>

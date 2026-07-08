@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState, useMemo } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import './App.css';
+import './Home_Responsive.css';
 import CoordinateSection from './CoordinateSection';
 import ProjectsSection from './ProjectsSection';
 import ServicePricing from './ServicePricing';

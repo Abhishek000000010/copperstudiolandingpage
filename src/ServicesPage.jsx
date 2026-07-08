@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import ServicePricing from './ServicePricing';
@@ -94,7 +94,7 @@ function ServicesPage() {
               <p className="custom-req-desc">Not every brand fits into a package. If you're looking for specific services, have custom requirements, or need support for a particular project, we'll build a solution designed around your goals.</p>
             </div>
             <div className="custom-req-action">
-              <button className="book-meeting-btn" onClick={() => window.location.href = '#contact'}>Book A Meeting</button>
+              <Link to="/contact" className="book-meeting-btn">Book A Meeting</Link>
             </div>
           </div>
 

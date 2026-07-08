@@ -29,6 +29,8 @@
   justify-content: center;
   width: 100%;
   z-index: 1;
+  padding: 0 40px;
+  box-sizing: border-box;
 }
 
 .wall-glass-wrapper {
@@ -40,8 +42,11 @@
   z-index: 2;
   width: 100%;
   max-width: 1440px;
+  padding: 0 40px;
+  box-sizing: border-box;
   will-change: transform;
 }
+
 .wall-title {
   font-family: 'Zalando Sans', sans-serif;
   font-weight: 600;
@@ -49,20 +54,21 @@
   color: #070815;
   margin: 0 0 20px 0;
   text-align: center;
+  line-height: 1.12;
 }
 
 .testimonial-bento {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 24px;
   perspective: 1500px;
 }
 
 .bento-row {
   display: flex;
-  gap: 20px;
+  gap: 24px;
   width: 100%;
 }
 
@@ -79,6 +85,7 @@
   justify-content: center;
   box-sizing: border-box;
   text-align: left;
+  min-height: 260px;
 }
 
 .bento-center-content {
@@ -179,7 +186,7 @@
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
-  line-height: 21px;
+  line-height: 1.7;
   margin: 0 0 40px 0;
 }
 
@@ -255,57 +262,396 @@
   line-height: 18px;
 }
 
-.author-company.dark-text, .bento-beige .author-company {
+.author-company.dark-text,
+.bento-beige .author-company {
   color: #504F4F;
 }
 
 @media (max-width: 1024px) {
+
+  /* --------------------------------
+     Main Container
+  -------------------------------- */
+  .wall-section .global-container {
+    padding: 0 32px;
+  }
+
+  .wall-header-wrapper {
+    padding: 0 32px;
+  }
+
+  .wall-glass-wrapper {
+    padding: 0 32px;
+  }
+
+  /* Centered vertical header alignment preserved from desktop */
+
+  .bento-icon-desc,
+  .bento-stat-desc {
+    font-size: 15px;
+  }
+
+  .wall-title {
+    font-size: clamp(42px, 4.8vw, 48px);
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  /* --------------------------------
+     Bento Layout
+  -------------------------------- */
   .bento-row {
     flex-wrap: wrap;
+    gap: 18px;
   }
+
   .bento-card {
-    flex: 1 1 45% !important;
+    flex: 1 1 calc(50% - 9px) !important;
+    min-width: calc(50% - 9px);
+    padding: 28px 22px;
+    min-height: 220px;
+  }
+
+  .bento-icon-title {
+    font-size: clamp(20px, 2.5vw, 22px);
+    line-height: 28px;
+  }
+
+  .bento-text {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .bento-stat-4x {
+    font-size: clamp(70px, 8vw, 85px);
+    line-height: 96px;
+  }
+
+  .bento-stat-98 {
+    font-size: clamp(55px, 6.5vw, 68px);
+    line-height: 84px;
+  }
+
+  .bento-stat-subtitle {
+    font-size: clamp(20px, 2.5vw, 22px);
+  }
+
+  .author-details h4 {
+    font-size: 16px;
+  }
+
+  .author-details p {
+    font-size: 14px;
+  }
+
+  .author-company {
+    font-size: 13px;
+  }
+
+  /* --------------------------------
+     Testimonial SVG
+  -------------------------------- */
+  .testimonial-svg-container,
+  .global-cursive-svg-container {
+    margin-top: clamp(-70px, -6vw, -50px);
+    margin-bottom: 0;
+  }
+
+  .testimonial-svg,
+  .global-cursive-svg {
+    width: 100%;
+    max-width: clamp(480px, 50vw, 620px);
+    height: auto;
+    aspect-ratio: 4 / 1;
   }
 }
 
+/* ==========================================================
+   Tablet / Mobile (<=768px)
+========================================================== */
 @media (max-width: 768px) {
-  .bento-card {
-    flex: 1 1 100% !important;
-  }
-}
 
-/* ============================================================
-   MOBILE RESPONSIVE REFINEMENTS (added — desktop untouched)
-   ============================================================ */
-@media (max-width: 768px) {
+  /* --------------------------------
+     Main Container
+  -------------------------------- */
   .wall-section .global-container {
     padding: 0 20px;
   }
+
+  .wall-header-wrapper {
+    padding: 0 20px;
+  }
+
+  .wall-glass-wrapper {
+    padding: 0 20px;
+  }
+
+  /* Centered vertical header alignment preserved from desktop */
+
+  .bento-icon-desc,
+  .bento-stat-desc {
+    font-size: 14px;
+  }
+
   .wall-title {
-    font-size: 34px;
+    font-size: clamp(34px, 5vw, 40px);
+    text-align: center;
+    margin-bottom: 10px;
   }
+
+  /* --------------------------------
+     Bento Layout
+  -------------------------------- */
+  .bento-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
   .bento-card {
-    padding: 28px 22px;
+    flex: 1 1 calc(50% - 9px) !important;
+    min-width: calc(50% - 9px);
+    padding: 24px 20px;
+    min-height: 200px;
   }
+
   .bento-icon-title {
-    font-size: 20px;
+    font-size: clamp(18px, 3vw, 20px);
     line-height: 26px;
   }
+
   .bento-text {
-    font-size: 15px;
+    font-size: 14.5px;
+    line-height: 1.7;
   }
+
   .bento-stat-4x {
-    font-size: 72px;
+    font-size: clamp(55px, 9vw, 70px);
     line-height: 90px;
   }
+
   .bento-stat-98 {
-    font-size: 60px;
+    font-size: clamp(45px, 7.5vw, 56px);
     line-height: 78px;
   }
+
   .bento-stat-subtitle {
-    font-size: 20px;
+    font-size: clamp(18px, 3vw, 20px);
     line-height: 26px;
   }
+
+  .author-details h4 {
+    font-size: 15px;
+  }
+
+  .author-details p {
+    font-size: 13.5px;
+  }
+
+  .author-company {
+    font-size: 12.5px;
+  }
+
+  /* --------------------------------
+     Testimonial SVG
+  -------------------------------- */
+  .testimonial-svg-container,
+  .global-cursive-svg-container {
+    margin-top: clamp(-50px, -5vw, -35px);
+    margin-bottom: 0;
+  }
+
+  .testimonial-svg,
+  .global-cursive-svg {
+    width: 100%;
+    max-width: clamp(340px, 60vw, 480px);
+    height: auto;
+    aspect-ratio: 4 / 1;
+  }
+}
+
+/* ==========================================================
+   Mobile (<=576px)
+========================================================== */
+@media (max-width: 576px) {
+
+  .wall-section .global-container {
+    padding: 0 16px;
+  }
+
+  .wall-header-wrapper {
+    padding: 0 16px;
+  }
+
+  .wall-glass-wrapper {
+    padding: 0 16px;
+  }
+
+  /* Centered vertical header alignment preserved from desktop */
+
+  .bento-icon-desc,
+  .bento-stat-desc {
+    font-size: 13px;
+  }
+
+  .bento-author {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .wall-title {
+    font-size: clamp(28px, 6vw, 32px);
+    margin-bottom: 8px;
+  }
+
+  .bento-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .bento-card {
+    flex: 1 1 100% !important;
+    min-width: 100%;
+    padding: 22px 18px;
+  }
+
+  .bento-icon-title {
+    font-size: clamp(16px, 4vw, 18px);
+    line-height: 24px;
+  }
+
+  .bento-text {
+    font-size: 14px;
+  }
+
+  .bento-stat-4x {
+    font-size: clamp(45px, 12vw, 55px);
+    line-height: 72px;
+  }
+
+  .bento-stat-98 {
+    font-size: clamp(38px, 9.5vw, 46px);
+    line-height: 64px;
+  }
+
+  .bento-stat-subtitle {
+    font-size: clamp(16px, 4vw, 18px);
+  }
+
+  .author-details h4 {
+    font-size: 14.5px;
+  }
+
+  .author-details p {
+    font-size: 13px;
+  }
+
+  .author-company {
+    font-size: 12px;
+  }
+
+  .testimonial-svg-container,
+  .global-cursive-svg-container {
+    margin-top: clamp(-40px, -6vw, -25px);
+  }
+
+  .testimonial-svg,
+  .global-cursive-svg {
+    width: 100%;
+    max-width: clamp(280px, 75vw, 360px);
+    height: auto;
+    aspect-ratio: 4 / 1;
+  }
+}
+
+/* ==========================================================
+   Small Mobile (<=400px)
+========================================================== */
+@media (max-width: 400px) {
+
+  .wall-section .global-container {
+    padding: 0 12px;
+  }
+
+  .wall-header-wrapper {
+    padding: 0 12px;
+  }
+
+  .wall-glass-wrapper {
+    padding: 0 12px;
+  }
+
+  /* Centered vertical header alignment preserved from desktop */
+
+  .bento-icon-desc,
+  .bento-stat-desc {
+    font-size: 12px;
+  }
+
+  .bento-author {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .wall-title {
+    font-size: clamp(24px, 7vw, 26px);
+    margin-bottom: 6px;
+  }
+
+  .bento-card {
+    padding: 18px 16px;
+  }
+
+  .bento-icon-title {
+    font-size: clamp(15px, 4.5vw, 16px);
+    line-height: 22px;
+  }
+
+  .bento-text {
+    font-size: 13px;
+  }
+
+  .bento-stat-4x {
+    font-size: clamp(36px, 14vw, 45px);
+    line-height: 64px;
+  }
+
+  .bento-stat-98 {
+    font-size: clamp(32px, 11vw, 38px);
+    line-height: 56px;
+  }
+
+  .bento-stat-subtitle {
+    font-size: clamp(15px, 4.5vw, 16px);
+  }
+
+  .author-details h4 {
+    font-size: 13.5px;
+  }
+
+  .author-details p {
+    font-size: 12px;
+  }
+
+  .author-company {
+    font-size: 11px;
+  }
+
+  .testimonial-svg-container,
+  .global-cursive-svg-container {
+    margin-top: clamp(-30px, -5vw, -20px);
+  }
+
+  .testimonial-svg,
+  .global-cursive-svg {
+    width: 100%;
+    max-width: clamp(240px, 85vw, 290px);
+    height: auto;
+    aspect-ratio: 4 / 1;
+  }
+
 }
 
 /* ============================================================
@@ -330,7 +676,8 @@
 .testimonial-svg text {
   font-family: 'Sacramento', cursive;
   font-size: 150px;
-  fill: #F69049; /* Fallback for browsers that don't animate */
+  fill: #F69049;
+  /* Fallback for browsers that don't animate */
 }
 
 /* Base state before animation triggers */
@@ -351,10 +698,12 @@
     stroke-dashoffset: 2000;
     fill: transparent;
   }
+
   60% {
     stroke-dashoffset: 0;
     fill: transparent;
   }
+
   100% {
     stroke-dashoffset: 0;
     fill: #F69049;

@@ -47,7 +47,7 @@ const Footer = () => {
             <a href="#services">Services</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
-            <a href="#portal">Client Portal</a>
+            <a href="/#contact">Client Portal</a>
           </div>
 
           <div className="footer-socials">

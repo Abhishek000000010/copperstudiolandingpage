@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState, useMemo } from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import React, { useEffect, useMemo } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import CoordinateSection from './CoordinateSection';
 import ProjectsSection from './ProjectsSection';
@@ -18,8 +18,6 @@ import Navbar from './Navbar';
 
 import logoImg from './assets/logo.svg';
 function Home() {
-  const navigate = useNavigate();
-
   // Prevent downloading images/videos via right-click
   useEffect(() => {
     const handleContextMenu = (e) => {
@@ -38,7 +36,6 @@ function Home() {
 
   // 14 stripes based on the Figma spec (Rectangle 89 through 102)
   const stripes = Array.from({ length: 14 });
-  console.log("Logo path loaded as:", logoImg);
 
   // Generate the complex 3-stage wave animation for the hero stripes
   const stripeAnimationCSS = useMemo(() => {
@@ -88,45 +85,6 @@ function Home() {
       css += keyframes;
     }
     return css;
-  }, []);
-
-  // Intersection Observer for Trusted Brands Reveal
-  const trustedRef = useRef(null);
-
-  // Intersection Observer for Services Reveal
-  const servicesRef = useRef(null);
-
-  useEffect(() => {
-    // Trusted Brands Observer
-    const trustedObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsTrustedVisible(true);
-        }
-      },
-      { threshold: 0.3 }
-    );
-    if (trustedRef.current) {
-      trustedObserver.observe(trustedRef.current);
-    }
-
-    // Services Observer
-    const servicesObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsServicesVisible(true);
-        }
-      },
-      { threshold: 0.1 } // Lower threshold so it triggers as soon as the grid starts coming up
-    );
-    if (servicesRef.current) {
-      servicesObserver.observe(servicesRef.current);
-    }
-
-    return () => {
-      trustedObserver.disconnect();
-      servicesObserver.disconnect();
-    };
   }, []);
 
   return (
