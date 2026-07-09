@@ -8,7 +8,9 @@ export default function CoordinateSection() {
       <div className="global-container flex-col-center">
         <h2 className="section-title">How Do We Co-ordinate?</h2>
         <p className="section-subtitle">
-          <span className="subtitle-italic">Stay connected to your project from start to finish.</span><br/>
+          <span className="subtitle-italic">Stay connected to your project from start to finish.</span>
+        </p>
+        <p className="subtitle-para">
           Our client portal gives you a dedicated space to track progress, view project timelines, access upcoming meetings, share files, and download every deliverable.
           
           With lifetime access, your portal remains available long after your project is complete, giving you a permanent home for everything we've created together.

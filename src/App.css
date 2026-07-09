@@ -331,6 +331,26 @@ img, video {
   color: #101010;
 }
 
+@media (max-width: 900px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-menu-btn {
+    display: flex !important;
+    flex-shrink: 0;
+  }
+
+  .navbar {
+    width: calc(100% - 32px);
+    max-width: none;
+    padding: 10px 16px;
+    gap: 12px;
+    top: 12px;
+    height: 56px;
+  }
+}
+
 /* --- Bottom Bar --- */
 .bottom-bar {
   position: absolute;

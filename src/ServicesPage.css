@@ -687,3 +687,85 @@
     font-size: 60px;
   }
 }
+
+@media (max-width: 430px) {
+  .custom-req-banner {
+    width: calc(100% - 12px);
+    margin: 0 auto 80px;
+    padding: 24px 18px;
+    border-radius: 26px;
+    gap: 18px;
+    align-items: center;
+  }
+
+  .custom-req-content {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .custom-req-label {
+    margin-bottom: 12px;
+  }
+
+  .custom-req-title {
+    font-size: clamp(26px, 7vw, 30px);
+    line-height: 1.12;
+    margin-bottom: 12px;
+  }
+
+  .custom-req-desc {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .custom-req-action {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .custom-req-action .book-meeting-btn {
+    width: min(100%, 240px);
+    padding: 12px 22px;
+    font-size: 16px;
+    border-radius: 18px;
+  }
+
+  .see-in-action-footer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .see-more-link {
+    width: fit-content;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 8px;
+  }
+
+  .see-more-grey,
+  .see-more-white {
+    font-size: 18px;
+    line-height: 1.1;
+    margin-right: 0;
+  }
+
+  .see-more-grey {
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .see-more-white {
+    display: block;
+  }
+
+  .see-more-arrow-circle {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+  }
+}

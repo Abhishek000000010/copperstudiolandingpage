@@ -32,8 +32,19 @@
   font-size: 18px;
   color: #504F4F;
   max-width: 920px;
-  margin: 0 0 56px 0;
+  margin: 0 0 8px 0;
   line-height: 1.6;
+}
+
+.subtitle-para {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #504F4F;
+  max-width: 920px;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
+  text-align: left;
 }
 
 .subtitle-italic {
@@ -88,14 +99,31 @@
 
   .section-subtitle {
     max-width: 760px;
-    margin: 0 0 48px 0;
+    margin: 0 auto 6px;
     font-size: 17px;
     line-height: 1.7;
+  }
+
+  .subtitle-para {
+    max-width: 760px;
+    margin: 0 auto 32px;
+    font-size: 17px;
+    line-height: 1.7;
+    text-align: left;
+  }
+
+  .subtitle-italic {
+    display: block;
+    text-align: center;
   }
 
   .coordinate-video-box {
     max-width: 860px;
     border-radius: 22px;
+  }
+
+  .desktop-break {
+    display: none;
   }
 }
 
@@ -119,10 +147,18 @@
   .section-subtitle {
     width: 100%;
     max-width: 620px;
-    margin: 0 auto 40px;
+    margin: 0 auto 6px;
     font-size: 16px;
     line-height: 1.75;
-    text-align: center;
+  }
+
+  .subtitle-para {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto 28px;
+    font-size: 16px;
+    line-height: 1.75;
+    text-align: justify;
   }
 
   .subtitle-italic {
@@ -137,6 +173,9 @@
     border-radius: 20px;
   }
 
+  .desktop-break {
+    display: none;
+  }
 }
 @media (max-width: 576px) {
 
@@ -152,7 +191,15 @@
     max-width: 100%;
     font-size: 15px;
     line-height: 1.75;
-    margin-bottom: 30px;
+    margin-bottom: 4px;
+  }
+
+  .subtitle-para {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: 20px;
+    text-align: justify;
   }
 
   .subtitle-italic {
@@ -163,6 +210,9 @@
     border-radius: 16px;
   }
 
+  .desktop-break {
+    display: none;
+  }
 }
 
 @media (max-width: 400px) {
@@ -176,7 +226,17 @@
 
   .section-subtitle {
     font-size: 14px;
-    margin-bottom: 24px;
+    margin-bottom: 4px;
+  }
+
+  .subtitle-para {
+    font-size: 14px;
+    margin-bottom: 16px;
+    text-align: justify;
+  }
+
+  .desktop-break {
+    display: none;
   }
 }
 

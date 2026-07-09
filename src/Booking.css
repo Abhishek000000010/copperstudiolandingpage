@@ -238,3 +238,50 @@
     height: 480px;
   }
 }
+
+/* Small-phone override: keep Calendly fully visible on 360px-430px screens */
+@media (max-width: 430px) {
+  .booking-section {
+    padding: 56px 0;
+  }
+
+  .booking-card {
+    width: calc(100% - 12px);
+    height: auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow: visible;
+  }
+
+  .booking-info {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    padding: 36px 20px;
+  }
+
+  .booking-widget {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    align-items: stretch;
+  }
+
+  .calendly-inline-widget-wrapper {
+    width: 100%;
+    height: 680px;
+    min-height: 680px;
+    overflow: visible;
+  }
+
+  .calendly-inline-widget-wrapper iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
+    display: block;
+  }
+}
+
+
