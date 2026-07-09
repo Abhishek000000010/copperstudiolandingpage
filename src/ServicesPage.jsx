@@ -78,7 +78,7 @@ function ServicesPage() {
         {/* Dark Container for Ecosystem, Pricing, See it in Action */}
         <div className="services-dark-section">
           <div className="ecosystem-header">
-            <h2 className="ecosystem-title">Discover The CopperEcosystem</h2>
+            <h2 className="ecosystem-title">Discover The Copper Ecosystem</h2>
             <h3 className="ecosystem-subtitle">Services</h3>
           </div>
 

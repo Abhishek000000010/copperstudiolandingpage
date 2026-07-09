@@ -7,7 +7,7 @@ export default function CoordinateSection() {
     <section className="coordinate-section">
       <div className="global-container flex-col-center">
         <h2 className="section-title">How Do We Co-ordinate?</h2>
-        <p className="section-subtitle">
+        <p className="coordinate-subtitle">
           <span className="subtitle-italic">Stay connected to your project from start to finish.</span>
         </p>
         <p className="subtitle-para">

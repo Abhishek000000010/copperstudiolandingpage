@@ -490,6 +490,11 @@
   .git-details {
     padding: 32px 20px;
   }
+
+  .git-main-title {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
 }
 
 
