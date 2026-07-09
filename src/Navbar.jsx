@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logoImg from './assets/logo.svg';
 
@@ -7,10 +7,20 @@ function Navbar({ activeSection, setActiveSection }) {
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
+    document.body.style.touchAction = isMobileMenuOpen ? 'none' : '';
+
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.touchAction = '';
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <>
       {/* Mobile Menu Overlay */}
-      <div className={`mobile-menu-overlay ${isMobileMenuOpen ? 'open' : ''}`}>
+      <div className={`mobile-menu-overlay ${isMobileMenuOpen ? 'open' : ''}`} aria-hidden={!isMobileMenuOpen}>
         <div className="mobile-nav-links">
           <Link to="/" className={activeSection === 'home' ? 'active' : ''} onClick={() => { toggleMobileMenu(); if(setActiveSection) setActiveSection('home'); }}>Home</Link>
           <Link to="/studio" className={activeSection === 'about' ? 'active' : ''} onClick={() => { toggleMobileMenu(); if(setActiveSection) setActiveSection('about'); }}>Studio</Link>
@@ -65,7 +75,7 @@ function Navbar({ activeSection, setActiveSection }) {
         </div>
 
         {/* Hamburger Menu Button */}
-        <button className="mobile-menu-btn" onClick={toggleMobileMenu} aria-label="Toggle mobile menu">
+        <button className="mobile-menu-btn" onClick={toggleMobileMenu} aria-label="Toggle mobile menu" aria-expanded={isMobileMenuOpen}>
           {isMobileMenuOpen ? (
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <line x1="18" y1="6" x2="6" y2="18"></line>
