@@ -34,12 +34,6 @@
   mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
 }
 
-.services-hero-bg-svg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .ws-hero-content {
   position: relative;
   z-index: 10;
@@ -299,9 +293,6 @@
 }
 
 /* Card 2 */
-.ws-fc-2 {
-  background: #8D3118;
-}
 .ws-fc-2 .ws-circle-2 {
   position: absolute;
   height: 300px;
@@ -738,139 +729,51 @@
 }
 
 .ws-brand-box {
-  background: #e5e7eb;
-  border-radius: 12px;
+  border-radius: 24px;
   width: 300px;
   height: 300px;
   flex-shrink: 0;
 }
 
-@media (max-width: 1200px) {
-  .ws-medium-card {
-    width: 60%;
-  }
-  /* Fit the comparison table within container on smaller laptop views */
-  .cp-table {
-    max-width: 100%;
-  }
-  .cp-feature-col {
-    width: 34%;
-  }
-  .cp-plan-col {
-    width: 22%;
-    padding: 24px 8px;
-  }
-  .cp-plan-desc {
-    font-size: 11px;
-    line-height: 15px;
-    padding: 0 4px;
-  }
+.ws-more-projects-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
 }
 
-@media (max-width: 1024px) {
-  .ws-desc {
-    margin-bottom: 80px;
-  }
+.ws-more-projects-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
 
-  /* Features Grid: 2-column layout */
-  .ws-features-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    max-width: 700px;
-    margin: 40px auto 0;
-  }
-  .ws-feature-card {
-    max-width: 100%;
-    width: 100%;
-    height: 480px;
-    padding: 28px;
-  }
-  .ws-feature-title {
-    font-size: 26px;
-    line-height: 32px;
-    margin: 0;
-    left: 28px;
-    right: 28px;
-    top: 28px;
-  }
-  .ws-feature-desc {
-    font-size: 15px;
-    margin: 0;
-    left: 28px;
-    right: 28px;
-    bottom: 32px;
-  }
-  .ws-fc-1 .ws-circle-1 {
-    top: 140px;
-    width: 160px;
-    height: 160px;
-    left: calc(50% - 80px);
-  }
-  .ws-fc-2 .ws-circle-2 {
-    bottom: -40px;
-    height: 200px;
-    left: 0;
-    right: 0;
-  }
-  .ws-fc-2 .ws-circle-3 {
-    top: -60px;
-    width: 260px;
-    height: 260px;
-    left: -10px;
-  }
-  .ws-fc-3 .ws-circle-4 {
-    top: 140px;
-    width: 50%;
-    left: 25%;
-  }
-  .ws-fc-4 .ws-vector {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    object-fit: cover;
-  }
-  
-  /* Every Website Comes With Grid: 2-column layout */
-  .ws-every-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    max-width: 700px;
-    margin: 0 auto;
-  }
+.ws-more-projects-link:hover {
+  opacity: 0.8;
+}
 
-  /* Brands Section: tablet single-row square layout */
-  .ws-brands-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-  }
-  .ws-brand-box {
-    flex: 1;
-    min-width: 0;
-    max-width: 240px;
-    height: auto;
-    aspect-ratio: 1 / 1;
-  }
-  /* Scoped Booking Section padding & offset to prevent navbar overlap */
-  .web-service-page .booking-section {
-    padding-top: 120px;
-    scroll-margin-top: 100px;
-  }
-  .web-service-page .booking-card {
-    height: 580px;
-    min-height: 580px;
-  }
-  .ws-every-card {
-    max-width: 100%;
-    width: 100%;
-    height: 200px;
-    padding: 24px;
-  }
+.ws-more-projects-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  color: #8C8C8C;
+}
+
+.ws-more-projects-text strong {
+  color: #070815;
+  font-weight: 600;
+}
+
+.ws-more-projects-btn {
+  width: 24px;
+  height: 24px;
+  background-color: #C55418;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 900px) {
@@ -881,34 +784,24 @@
 
 @media (max-width: 768px) {
   /* Hero */
-  .ws-hero-wrap {
-    padding: 10px 12px 0;
-  }
   .ws-hero-card {
-    height: calc(100vh - 20px);
-    border-radius: 16px;
+    min-height: 68vh;
   }
   .ws-hero-title {
     font-size: clamp(2rem, 8vw, 2.75rem);
     line-height: 1.15;
   }
   .ws-hero-content {
-    padding: 70px 20px 0;
-  }
-  .ws-hero-bg .svg-blob-blue {
-    transform: translate(280px, 0);
-  }
-  .ws-hero-bg .svg-blob-orange {
-    transform: translate(-280px, 0);
+    padding: 0 20px;
   }
 
   /* Section spacing: section provides the side padding, inner drops its 40px.
      box-sizing keeps the 100%-wide sections from overflowing once padding is added. */
-  .ws-content-section, .ws-every-website-section, .compare-plans-section, .ws-brands-section {
+  .ws-content-section, .compare-plans-section, .ws-brands-section {
     padding: 48px 20px;
     box-sizing: border-box;
   }
-  .ws-content-inner, .ws-every-website-inner, .compare-plans-inner, .ws-brands-inner {
+  .ws-content-inner, .compare-plans-inner, .ws-brands-inner {
     padding: 0;
   }
 
@@ -939,22 +832,12 @@
     margin: 0 0 24px;
   }
   .ws-tags-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 8px;
     margin-top: 20px;
     margin-bottom: 28px;
-    width: 100%;
   }
   .ws-skill-tag {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 8px 10px;
-    font-size: 11px;
-    height: 100%;
-    box-sizing: border-box;
+    padding: 7px 16px;
   }
 
   /* Divider: was a fixed 400px width that overflowed narrow screens */
@@ -974,74 +857,12 @@
     height: 220px;
   }
 
-  /* Features Grid: 2-column layout on tablet */
-  .ws-features-grid {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 100%;
-    margin: 30px 0 0 0;
-    gap: 20px;
-  }
-  .ws-feature-card {
-    height: 440px;
-    max-width: 100%;
-    padding: 20px 20px 24px;
-    justify-content: flex-start;
-  }
-  .ws-feature-title {
-    font-size: 24px;
-    line-height: 30px;
-    margin: 0;
-    left: 20px;
-    right: 20px;
-    top: 20px;
-  }
-  .ws-feature-desc {
-    font-size: 15px;
-    line-height: 1.35;
-    margin: 0;
-    left: 20px;
-    right: 20px;
-    bottom: 24px;
-  }
-  .ws-fc-1 .ws-circle-1 {
-    top: 132px;
-  }
-  .ws-fc-2 .ws-circle-2 {
-    bottom: -62px;
-  }
-  .ws-fc-2 .ws-circle-3 {
-    top: -92px;
-  }
-  .ws-fc-3 .ws-circle-4 {
-    top: 104px;
-  }
-
-  /* Every Website Comes With Grid: 2-column layout on tablet */
-  .ws-every-grid {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 100%;
-    margin: 0;
-    gap: 16px;
-  }
-  .ws-every-card {
-    height: auto;
-    min-height: 180px;
-    padding: 24px;
-    max-width: 100%;
-  }
-  .ws-every-title {
-    font-size: 28px;
-    margin-bottom: 24px;
-  }
-
   /* Compare plans */
   .cp-title {
     font-size: 34px;
     line-height: 42px;
   }
   .cp-subtitle {
-    text-align: left;
-    max-width: 100%;
     margin-bottom: 28px;
   }
   .cp-table-container {
@@ -1131,51 +952,6 @@
   }
   .ws-card {
     height: 200px;
-  }
-  .ws-tags-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .ws-skill-tag {
-    font-size: 11px;
-    padding: 8px 6px;
-  }
-  .ws-features-grid {
-    grid-template-columns: 1fr;
-  }
-  .ws-feature-card {
-    height: 390px;
-    padding: 18px 18px 22px;
-  }
-  .ws-feature-title {
-    font-size: 22px;
-    line-height: 27px;
-    margin: 0;
-    left: 18px;
-    right: 18px;
-    top: 18px;
-  }
-  .ws-feature-desc {
-    font-size: 14px;
-    line-height: 1.32;
-    margin: 0;
-    left: 18px;
-    right: 18px;
-    bottom: 20px;
-  }
-  .ws-fc-1 .ws-circle-1 {
-    top: 118px;
-  }
-  .ws-fc-2 .ws-circle-2 {
-    bottom: -70px;
-  }
-  .ws-fc-2 .ws-circle-3 {
-    top: -100px;
-  }
-  .ws-fc-3 .ws-circle-4 {
-    top: 94px;
-  }
-  .ws-every-grid {
-    grid-template-columns: 1fr;
   }
   .cp-title {
     font-size: 30px;

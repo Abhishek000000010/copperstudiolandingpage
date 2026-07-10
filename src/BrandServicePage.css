@@ -34,12 +34,6 @@
   mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
 }
 
-.services-hero-bg-svg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .bs-hero-content {
   position: relative;
   z-index: 10;
@@ -475,49 +469,6 @@
   flex-shrink: 0;
 }
 
-@media (max-width: 1024px) {
-  .bs-desc {
-    margin-bottom: 80px;
-  }
-  .bs-subsection {
-    margin-bottom: 60px;
-  }
-  .bs-section-divider {
-    margin-bottom: 60px;
-  }
-  .bs-sub-title {
-    font-size: 28px;
-  }
-  .bs-sub-desc {
-    font-size: 15px;
-    margin-bottom: 24px;
-  }
-
-  /* Brands Section: tablet single-row square layout */
-  .bs-brands-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-  }
-  .bs-brand-box {
-    flex: 1;
-    min-width: 0;
-    max-width: 240px;
-    height: auto;
-    aspect-ratio: 1 / 1;
-  }
-  /* Scoped Booking Section padding & offset to prevent navbar overlap */
-  .brand-service-page .booking-section {
-    padding-top: 120px;
-    scroll-margin-top: 100px;
-  }
-  .brand-service-page .booking-card {
-    height: 580px;
-    min-height: 580px;
-  }
-}
-
 @media (max-width: 900px) {
   .bs-medium-card {
     width: 60%;
@@ -526,25 +477,15 @@
 
 @media (max-width: 768px) {
   /* Hero */
-  .bs-hero-wrap {
-    padding: 10px 12px 0;
-  }
   .bs-hero-card {
-    height: calc(100vh - 20px);
-    border-radius: 16px;
+    min-height: 68vh;
   }
   .bs-hero-title {
     font-size: clamp(2rem, 8vw, 2.75rem);
     line-height: 1.15;
   }
   .bs-hero-content {
-    padding: 70px 20px 0;
-  }
-  .bs-hero-bg .svg-blob-blue {
-    transform: translate(280px, 0);
-  }
-  .bs-hero-bg .svg-blob-orange {
-    transform: translate(-280px, 0);
+    padding: 0 20px;
   }
 
   /* Section spacing: section provides the side padding, inner drops its 40px.
@@ -584,22 +525,12 @@
     margin: 0 0 24px;
   }
   .bs-tags-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 8px;
     margin-top: 20px;
     margin-bottom: 28px;
-    width: 100%;
   }
   .bs-skill-tag {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 8px 10px;
-    font-size: 11px;
-    height: 100%;
-    box-sizing: border-box;
+    padding: 7px 16px;
   }
 
   /* Divider: was a fixed 400px width that overflowed narrow screens */
@@ -625,8 +556,6 @@
     line-height: 42px;
   }
   .cp-subtitle {
-    text-align: left;
-    max-width: 100%;
     margin-bottom: 28px;
   }
   .cp-table-container {
@@ -716,13 +645,6 @@
   }
   .bs-card {
     height: 200px;
-  }
-  .bs-tags-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .bs-skill-tag {
-    font-size: 11px;
-    padding: 8px 6px;
   }
   .cp-title {
     font-size: 30px;

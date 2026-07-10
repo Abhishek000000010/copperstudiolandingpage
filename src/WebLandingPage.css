@@ -290,125 +290,76 @@
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
-/* Media Queries for Responsiveness */
-
-/* Laptop Screens (max-width: 1200px) */
-@media (max-width: 1200px) {
-  .brand-landing-hero {
-    min-height: max(calc(100vh - 32px), 750px);
-  }
-  .brand-landing-nav {
-    padding: 20px 30px;
-  }
-  .bl-hero-title {
-    font-size: 60px;
-    line-height: 72px;
-  }
-  .bl-hero-subtitle {
-    font-size: 20px;
-    line-height: 27px;
-  }
-  .bl-trusted-banner-glass {
-    margin: 0 40px 60px 40px;
-    padding: 0 32px;
-    height: 150px;
-  }
-  .bl-trusted-text {
-    font-size: 20px;
-    line-height: 25px;
-    width: 240px;
-  }
-  .web-landing-page .studio-belief {
-    padding: 80px 40px;
-  }
-}
-
-/* Tablets (max-width: 991px) */
-@media (max-width: 991px) {
-  .brand-landing-hero {
-    min-height: max(calc(100vh - 32px), 650px);
-  }
-  .bl-hero-title {
-    font-size: 48px;
-    line-height: 58px;
-  }
-  .bl-hero-subtitle {
-    font-size: 18px;
-    line-height: 24px;
-  }
-  .bl-hero-subtitle br {
-    display: none;
-  }
-}
-
-/* Small Tablets and Large Mobile (max-width: 768px) */
+/* ------------------------------------------------------------------ */
+/* Mobile Responsiveness (desktop layout above 768px is untouched)     */
+/* ------------------------------------------------------------------ */
 @media (max-width: 768px) {
   .bl-hero-wrapper {
     padding: 10px;
   }
+
   .brand-landing-hero {
-    border-radius: 16px;
-    min-height: auto;
-    padding-bottom: 60px;
+    min-height: calc(100vh - 20px);
+    border-radius: 18px;
   }
+
   .brand-landing-nav {
-    padding: 16px 20px;
+    padding: 18px 20px;
   }
+
   .bl-logo-img {
     height: 32px;
   }
-  .bl-lets-talk-btn {
-    height: 36px;
-    padding: 4px 10px 4px 12px;
-    font-size: 13px;
-  }
+
   .brand-landing-hero-content {
-    padding: 60px 20px 40px;
+    padding: 24px 20px;
   }
+
   .bl-hero-title {
     font-size: 38px;
-    line-height: 46px;
-    margin-bottom: 16px;
+    line-height: 1.15;
+    margin-bottom: 18px;
   }
-  .bl-hero-title br {
-    display: none;
-  }
+
   .bl-hero-subtitle {
     font-size: 16px;
-    line-height: 22px;
-    margin-bottom: 30px;
+    line-height: 1.45;
+    margin-bottom: 28px;
   }
+
+  /* Let the subtitle wrap naturally instead of at hard-coded breaks */
   .bl-hero-subtitle br {
     display: none;
   }
-  .bl-hero-btn-wrapper {
+
+  .bl-hero-btn-wrapper,
+  .bl-hero-main-btn {
     width: 100%;
     max-width: 280px;
   }
-  .bl-hero-main-btn {
-    width: 100%;
-  }
+
+  /* Stack the trusted banner vertically and give it breathing room */
   .bl-trusted-banner-glass {
     flex-direction: column;
-    height: auto;
-    padding: 24px 20px;
-    margin: 0 20px 20px 20px;
-    gap: 16px;
     align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 24px 20px;
+    margin: 0 16px 24px 16px;
+    height: auto;
   }
+
   .bl-trusted-text {
     width: 100%;
     text-align: center;
     justify-content: center;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 1.3;
   }
-  .bl-trusted-text br {
-    display: none;
-  }
+
   .bl-trusted-logos-viewport {
-    margin-left: 0;
     width: 100%;
+    margin-left: 0;
   }
 
   .bl-trusted-logos-track {
@@ -422,53 +373,41 @@
   .bl-trusted-logo-img.logo-3 { max-width: 90px; }
   .bl-trusted-logo-img.logo-dc { max-width: 85px; }
   .bl-trusted-logo-img.logo-nitty { max-width: 85px; }
-  
-  /* Studio Belief responsive adjustments */
+
+  /* Belief section */
   .web-landing-page .studio-belief {
-    padding: 60px 20px;
+    padding: 64px 20px;
   }
+
   .web-landing-page .studio-belief .belief-quote {
     font-size: 18px;
-    line-height: 1.5;
     margin-bottom: 40px;
   }
+
   .web-landing-page .studio-belief .belief-grid {
     flex-direction: column;
-    gap: 0;
+    gap: 32px;
   }
-  .web-landing-page .studio-belief .belief-item {
-    margin-bottom: 24px;
-    text-align: center;
-  }
+
   .web-landing-page .studio-belief .belief-divider {
-    width: 100%;
-    height: 1px;
-    margin: 4px 0 24px 0;
+    display: none;
   }
+
   .bl-pricing-wrapper {
     padding: 0 10px;
   }
 }
 
-/* Mobile Screens (max-width: 480px) */
 @media (max-width: 480px) {
-  .brand-landing-hero-content {
-    padding: 40px 10px 30px;
-  }
   .bl-hero-title {
     font-size: 32px;
-    line-height: 38px;
   }
+
   .bl-hero-subtitle {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 15px;
   }
-  .bl-trusted-banner-glass {
-    margin: 0 10px 10px 10px;
-    padding: 20px 15px;
-  }
+
   .bl-trusted-text {
     font-size: 16px;
-    line-height: 20px;
   }
 }
