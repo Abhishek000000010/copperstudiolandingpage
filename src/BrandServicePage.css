@@ -492,6 +492,21 @@
     font-size: 15px;
     margin-bottom: 24px;
   }
+
+  /* Brands Section: tablet single-row square layout */
+  .bs-brands-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+  .bs-brand-box {
+    flex: 1;
+    min-width: 0;
+    max-width: 240px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
 }
 
 @media (max-width: 900px) {

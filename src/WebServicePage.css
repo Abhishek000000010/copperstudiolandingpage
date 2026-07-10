@@ -795,32 +795,34 @@
     top: 28px;
   }
   .ws-feature-desc {
-    font-size: 16px;
+    font-size: 15px;
     margin: 0;
     left: 28px;
     right: 28px;
     bottom: 32px;
   }
   .ws-fc-1 .ws-circle-1 {
-    top: 150px;
-    left: calc(50% - 100px);
+    top: 140px;
+    width: 160px;
+    height: 160px;
+    left: calc(50% - 80px);
   }
   .ws-fc-2 .ws-circle-2 {
-    bottom: -60px;
-    height: 250px;
+    bottom: -40px;
+    height: 200px;
     left: 0;
     right: 0;
   }
   .ws-fc-2 .ws-circle-3 {
-    top: -80px;
-    width: 320px;
-    height: 320px;
-    left: -20px;
+    top: -60px;
+    width: 260px;
+    height: 260px;
+    left: -10px;
   }
   .ws-fc-3 .ws-circle-4 {
-    top: 130px;
-    width: 60%;
-    left: 20%;
+    top: 140px;
+    width: 50%;
+    left: 25%;
   }
   .ws-fc-4 .ws-vector {
     position: absolute;
@@ -838,6 +840,21 @@
     gap: 24px;
     max-width: 700px;
     margin: 0 auto;
+  }
+
+  /* Brands Section: tablet single-row square layout */
+  .ws-brands-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+  .ws-brand-box {
+    flex: 1;
+    min-width: 0;
+    max-width: 240px;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
   .ws-every-card {
     max-width: 100%;
