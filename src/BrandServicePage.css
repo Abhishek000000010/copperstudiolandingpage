@@ -507,6 +507,11 @@
     height: auto;
     aspect-ratio: 1 / 1;
   }
+  /* Scoped Booking Section padding & offset to prevent navbar overlap */
+  .brand-service-page .booking-section {
+    padding-top: 120px;
+    scroll-margin-top: 100px;
+  }
 }
 
 @media (max-width: 900px) {

@@ -856,6 +856,11 @@
     height: auto;
     aspect-ratio: 1 / 1;
   }
+  /* Scoped Booking Section padding & offset to prevent navbar overlap */
+  .web-service-page .booking-section {
+    padding-top: 120px;
+    scroll-margin-top: 100px;
+  }
   .ws-every-card {
     max-width: 100%;
     width: 100%;
