@@ -525,12 +525,22 @@
     margin: 0 0 24px;
   }
   .bs-tags-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 8px;
     margin-top: 20px;
     margin-bottom: 28px;
+    width: 100%;
   }
   .bs-skill-tag {
-    padding: 7px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8px 10px;
+    font-size: 11px;
+    height: 100%;
+    box-sizing: border-box;
   }
 
   /* Divider: was a fixed 400px width that overflowed narrow screens */
@@ -556,6 +566,8 @@
     line-height: 42px;
   }
   .cp-subtitle {
+    text-align: left;
+    max-width: 100%;
     margin-bottom: 28px;
   }
   .cp-table-container {
@@ -645,6 +657,13 @@
   }
   .bs-card {
     height: 200px;
+  }
+  .bs-tags-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bs-skill-tag {
+    font-size: 11px;
+    padding: 8px 6px;
   }
   .cp-title {
     font-size: 30px;

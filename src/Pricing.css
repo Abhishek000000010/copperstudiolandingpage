@@ -247,6 +247,9 @@
 }
 
 @media (max-width: 768px) {
+  .pricing-section .global-container {
+    padding: 8px 20px 0;
+  }
   .pricing-grid {
     grid-template-columns: 1fr;
     gap: 24px;
