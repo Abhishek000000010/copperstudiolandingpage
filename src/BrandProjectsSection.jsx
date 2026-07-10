@@ -16,7 +16,7 @@ import nittyGrittyWeb from './assets/nitty_gritty_desktop_black_1.png';
 import dataCirclesLaptop from './assets/datacircles_square.png';
 import dataCirclesPhone from './assets/DataCircles_web.webp';
 import facilitiesWeb from './assets/facilities-tours.png';
-import qodenextWeb from './assets/QodenextImage.webp';
+import qodenextWeb from './assets/qodenext_square.jpg';
 import cottsonWeb from './assets/cottson_square.png';
 
 import proj1Svg from './assets/projects/cottson-clothing-hq.webp';
