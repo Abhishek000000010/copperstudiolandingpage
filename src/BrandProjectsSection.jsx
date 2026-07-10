@@ -13,11 +13,11 @@ import img7 from './assets/project-7.png';
 import img8 from './assets/last-project.png'; 
 
 import nittyGrittyWeb from './assets/nitty_gritty_desktop_black_1.png';
-import dataCirclesLaptop from './assets/projects/datacircles-thumb.webp';
+import dataCirclesLaptop from './assets/DataCirclesLaptop.webp';
 import dataCirclesPhone from './assets/DataCircles_web.webp';
-import facilitiesWeb from './assets/projects/facilities-thumb.webp';
-import qodenextWeb from './assets/projects/qodenext-thumb.webp';
-import cottsonWeb from './assets/projects/cottsonclothing-thumb.webp';
+import facilitiesWeb from './assets/facilities-tours.png';
+import qodenextWeb from './assets/QodenextImage.webp';
+import cottsonWeb from './assets/cottson_square.png';
 
 import proj1Svg from './assets/projects/cottson-clothing-hq.webp';
 import proj2Svg from './assets/projects/commongrounds-hq.webp';
