@@ -861,6 +861,10 @@
     padding-top: 120px;
     scroll-margin-top: 100px;
   }
+  .web-service-page .booking-card {
+    height: 580px;
+    min-height: 580px;
+  }
   .ws-every-card {
     max-width: 100%;
     width: 100%;
