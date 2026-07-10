@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './BrandLandingPage.css';
 import logoImg from './assets/logo.svg';
 import BrandLandingHeroBg from './BrandLandingHeroBg';
@@ -26,6 +27,18 @@ export default function BrandLandingPage() {
     window.scrollTo(0, 0);
   }, []);
 
+  const handleCalendlyPopup = (e) => {
+    e.preventDefault();
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({
+        url: 'https://calendly.com/thecopperstudio/30min?hide_gdpr_banner=1&hide_event_type_details=1&hide_landing_page_details=1'
+      });
+    } else {
+      // Fallback in case adblocker blocks the script or it hasn't loaded yet
+      window.open('https://calendly.com/thecopperstudio/30min', '_blank');
+    }
+  };
+
   return (
     <div className="brand-landing-page">
       <div className="bl-hero-wrapper">
@@ -34,8 +47,8 @@ export default function BrandLandingPage() {
             <BrandLandingHeroBg />
           </div>
         <nav className="brand-landing-nav">
-          <img src={logoImg} alt="Logo" className="bl-logo-img" />
-          <button className="bl-lets-talk-btn">
+          <Link to="/"><img src={logoImg} alt="Logo" className="bl-logo-img" /></Link>
+          <button className="bl-lets-talk-btn" onClick={handleCalendlyPopup}>
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <rect x="4" y="5" width="16" height="15" rx="3.5" ry="3.5"></rect>
               <line x1="16" y1="3" x2="16" y2="7"></line>
@@ -47,10 +60,10 @@ export default function BrandLandingPage() {
           </button>
         </nav>
         <div className="brand-landing-hero-content">
-          <h1 className="bl-hero-title">Lorem ipsum dolor sit amet, consectetur</h1>
+          <h1 className="bl-hero-title">More than a logo.<br/>A brand people remember</h1>
           <p className="bl-hero-subtitle">From strategy and visual identity to websites and custom portals, we create thoughtful brand experience that helps your business stand out</p>
           <div className="bl-hero-btn-wrapper">
-            <button className="bl-hero-main-btn">Book A Meeting</button>
+            <button className="bl-hero-main-btn" onClick={handleCalendlyPopup}>Book A Meeting</button>
             <span className="bl-hero-btn-subtext">Free 30 Mins Video Call</span>
           </div>
         </div>

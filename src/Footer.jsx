@@ -44,7 +44,7 @@ const Footer = () => {
           <div className="footer-divider reveal-up" style={{ transitionDelay: '100ms' }}></div>
 
           <div className="footer-links reveal-up" style={{ transitionDelay: '200ms' }}>
-            <Link to="/studio">Studio</Link>
+            <Link to="/studio">About Us</Link>
             <Link to="/services">Services</Link>
             <Link to="/projects">Projects</Link>
             <Link to="/contact">Contact</Link>
@@ -78,11 +78,11 @@ const Footer = () => {
 
           <div className="footer-legal">
             <div className="legal-links">
-              <a href="#terms">Terms & Conditions</a>
+              <Link to="/termsandconditions">Terms & Conditions</Link>
               <span className="separator"></span>
-              <a href="#privacy">Privacy Policy</a>
+              <Link to="/privacypolicy">Privacy Policy</Link>
               <span className="separator"></span>
-              <a href="#disclosures">Disclosures</a>
+              <Link to="/disclosures">Disclosures</Link>
             </div>
             <p>2026 The Copper Studio. All Rights Reserved</p>
           </div>

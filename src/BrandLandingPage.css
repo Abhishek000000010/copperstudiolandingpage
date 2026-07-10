@@ -410,6 +410,18 @@
     margin-left: 0;
     width: 100%;
   }
+
+  .bl-trusted-logos-track {
+    gap: 40px;
+  }
+
+  .bl-trusted-logo-img {
+    max-width: 60px;
+    max-height: 60px;
+  }
+  .bl-trusted-logo-img.logo-3 { max-width: 90px; }
+  .bl-trusted-logo-img.logo-dc { max-width: 85px; }
+  .bl-trusted-logo-img.logo-nitty { max-width: 85px; }
   
   /* Studio Belief responsive adjustments */
   .brand-landing-page .studio-belief {

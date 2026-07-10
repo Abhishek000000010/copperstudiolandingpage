@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './WebLandingPage.css';
 import logoImg from './assets/logo.svg';
 import BrandLandingHeroBg from './BrandLandingHeroBg';
@@ -26,6 +27,18 @@ export default function WebLandingPage() {
     window.scrollTo(0, 0);
   }, []);
 
+  const handleCalendlyPopup = (e) => {
+    e.preventDefault();
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({
+        url: 'https://calendly.com/thecopperstudio/30min?hide_gdpr_banner=1&hide_event_type_details=1&hide_landing_page_details=1'
+      });
+    } else {
+      // Fallback in case adblocker blocks the script or it hasn't loaded yet
+      window.open('https://calendly.com/thecopperstudio/30min', '_blank');
+    }
+  };
+
   return (
     <div className="web-landing-page">
       <div className="bl-hero-wrapper">
@@ -34,8 +47,8 @@ export default function WebLandingPage() {
             <BrandLandingHeroBg />
           </div>
         <nav className="brand-landing-nav">
-          <img src={logoImg} alt="Logo" className="bl-logo-img" />
-          <button className="bl-lets-talk-btn">
+          <Link to="/"><img src={logoImg} alt="Logo" className="bl-logo-img" /></Link>
+          <button className="bl-lets-talk-btn" onClick={handleCalendlyPopup}>
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <rect x="4" y="5" width="16" height="15" rx="3.5" ry="3.5"></rect>
               <line x1="16" y1="3" x2="16" y2="7"></line>
@@ -50,7 +63,7 @@ export default function WebLandingPage() {
           <h1 className="bl-hero-title">A website your<br/>business deserves</h1>
           <p className="bl-hero-subtitle">We design and build custom websites that look distinctive and load fast. The kind that<br/>make people trust you and take action. Let's build yours.</p>
           <div className="bl-hero-btn-wrapper">
-            <button className="bl-hero-main-btn">Book A Meeting</button>
+            <button className="bl-hero-main-btn" onClick={handleCalendlyPopup}>Book A Meeting</button>
             <span className="bl-hero-btn-subtext">Free 30 Mins Video Call</span>
           </div>
         </div>
@@ -110,7 +123,7 @@ export default function WebLandingPage() {
         </div>
       </section>
 
-      <BrandProjectsSection />
+      <BrandProjectsSection web />
       
       <div className="bl-pricing-wrapper">
         <ServicePricingComponent activeService="web" showToggle={false} />
