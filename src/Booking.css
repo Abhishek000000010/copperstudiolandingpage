@@ -1,7 +1,7 @@
 .booking-section {
   position: relative;
   background-color: #FFFFFF;
-  padding: 80px 0;
+  padding: 100px 0;
   display: flex;
   justify-content: center;
 }
@@ -10,6 +10,7 @@
   display: flex;
   width: 100%;
   height: 660px;
+  min-height: 660px;
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 25px;
@@ -19,13 +20,13 @@
 }
 
 .booking-info {
-  width: 550px;
-  min-width: 550px;
+  width: 520px;
+  min-width: 520px;
   height: 100%;
   background: #070815;
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 25px;
-  padding: 80px 40px;
+  padding: 72px 40px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -35,9 +36,9 @@
   flex-grow: 1;
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
-  padding: 40px;
+  padding: 28px;
   box-sizing: border-box;
 }
 
@@ -54,7 +55,7 @@
   font-family: 'DM Sans', sans-serif;
   font-size: 16px;
   font-weight: 300;
-  line-height: 21px;
+  line-height: 1.65;
   color: rgba(152, 151, 149, 0.8);
   margin: 0 0 32px 0;
 }
@@ -128,55 +129,112 @@
   background: transparent;
   width: 100%;
   height: 100%;
+  min-height: 100%;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
+  .booking-section {
+    padding: 88px 0;
+  }
+  .booking-info {
+    width: 420px;
+    min-width: 420px;
+    padding: 56px 28px;
+  }
+  .booking-widget {
+    padding: 20px;
+  }
+  .booking-title {
+    font-size: 48px;
+    line-height: 1.15;
+  }
+}
+
+@media (max-width: 768px) {
+  .booking-section {
+    padding: 76px 0;
+  }
+
   .booking-card {
     flex-direction: column;
     height: auto;
+    min-height: 0;
     border-radius: 25px;
+    gap: 0;
   }
+
   .booking-info {
     width: 100%;
     min-width: 100%;
     border-right: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-    padding: 60px 32px;
+    padding: 40px 32px 30px;
     height: auto;
   }
-  .booking-meta {
-    margin-top: 40px;
-  }
-  .calendly-inline-widget-wrapper {
-    height: 600px;
-  }
-}
 
-@media (max-width: 480px) {
-  .booking-info {
-    padding: 40px 24px;
-  }
-  .booking-widget {
-    padding: 16px;
-  }
-}
-
-/* ============================================================
-   MOBILE RESPONSIVE REFINEMENTS (added — desktop untouched)
-   ============================================================ */
-@media (max-width: 768px) {
   .booking-title {
-    font-size: 38px;
+    font-size: 40px;
     line-height: 1.15;
   }
+
   .booking-lead {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
-  /* Give the Calendly widget nearly the full card width and enough height
-     so its month calendar isn't cramped/scrolled on a phone. */
+
+  .booking-points {
+    gap: 12px;
+  }
+
+  .booking-meta {
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+
+  .booking-widget {
+    padding: 20px;
+    height: auto;
+    display: block;
+  }
+
+  .calendly-inline-widget-wrapper {
+    height: 680px;
+  }
+}
+
+@media (max-width: 576px) {
+  .booking-section {
+    padding: 64px 0;
+  }
+
+  .booking-info {
+    padding: 30px 20px 24px;
+  }
+
+  .booking-title {
+    font-size: 32px;
+  }
+
   .booking-widget {
     padding: 10px;
+    height: auto;
+    display: block;
   }
+
+  .booking-point {
+    font-size: 15px;
+  }
+
+  .booking-meta {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+    margin-bottom: 12px;
+  }
+
+  .booking-widget {
+    padding: 12px;
+  }
+
   .calendly-inline-widget-wrapper {
     height: 500px;
   }
@@ -184,12 +242,60 @@
 
 @media (max-width: 480px) {
   .booking-info {
-    padding: 40px 22px;
+    padding: 30px 20px 16px;
   }
+
   .booking-widget {
-    padding: 6px;
+    padding: 8px;
   }
+
   .calendly-inline-widget-wrapper {
     height: 480px;
   }
 }
+
+@media (max-width: 430px) {
+  .booking-section {
+    padding: 56px 0;
+  }
+
+  .booking-card {
+    width: calc(100% - 16px);
+    height: auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    overflow: visible;
+  }
+
+  .booking-info {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    padding: 30px 16px 16px;
+  }
+
+  .booking-widget {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    align-items: stretch;
+  }
+
+  .calendly-inline-widget-wrapper {
+    width: 100%;
+    height: 680px;
+    min-height: 680px;
+    overflow: visible;
+  }
+
+  .calendly-inline-widget-wrapper iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
+    display: block;
+  }
+}
+
+
