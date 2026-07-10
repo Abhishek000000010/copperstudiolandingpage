@@ -48,7 +48,7 @@ export default function BrandProjectsSection({ web = false }) {
       <div className="global-container">
         <h2 className="bp-title">Take A Look At What We Have Created!</h2>
         
-        <div className="bp-grid">
+        <div className={`bp-grid ${web ? 'bp-grid-web' : ''}`}>
           {web ? (
             <>
               {/* Web Specific 6 Cards */}
