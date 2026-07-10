@@ -299,6 +299,9 @@
 }
 
 /* Card 2 */
+.ws-fc-2 {
+  background: #8D3118;
+}
 .ws-fc-2 .ws-circle-2 {
   position: absolute;
   height: 300px;
@@ -930,15 +933,18 @@
   .ws-feature-title {
     font-size: 24px;
     line-height: 30px;
-    margin-bottom: 10px;
-    width: 100%;
-    max-width: none;
+    margin: 0;
+    left: 20px;
+    right: 20px;
+    top: 20px;
   }
   .ws-feature-desc {
     font-size: 15px;
     line-height: 1.35;
-    width: 100%;
-    max-width: none;
+    margin: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 24px;
   }
   .ws-fc-1 .ws-circle-1 {
     top: 132px;
@@ -1086,15 +1092,18 @@
   .ws-feature-title {
     font-size: 22px;
     line-height: 27px;
-    margin-bottom: 8px;
-    width: 100%;
-    max-width: none;
+    margin: 0;
+    left: 18px;
+    right: 18px;
+    top: 18px;
   }
   .ws-feature-desc {
     font-size: 14px;
     line-height: 1.32;
-    width: 100%;
-    max-width: none;
+    margin: 0;
+    left: 18px;
+    right: 18px;
+    bottom: 20px;
   }
   .ws-fc-1 .ws-circle-1 {
     top: 118px;
