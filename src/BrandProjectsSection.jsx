@@ -12,10 +12,12 @@ import img6 from './assets/project-6.png';
 import img7 from './assets/project-7.png'; 
 import img8 from './assets/last-project.png'; 
 
-import nittyGrittyWeb from './assets/nitty_gritty_desktop_black_1.png';
-import dataCirclesLaptop from './assets/DataCirclesLaptop.webp';
+import nittyGrittyWeb from './assets/projects/nittygrity-thumb.webp';
+import dataCirclesLaptop from './assets/projects/datacircles-thumb.webp';
 import dataCirclesPhone from './assets/DataCircles_web.webp';
-import cottsonWeb from './assets/Cottson_web.webp';
+import facilitiesWeb from './assets/projects/facilities-thumb.webp';
+import qodenextWeb from './assets/projects/qodenext-thumb.webp';
+import cottsonWeb from './assets/projects/cottsonclothing-thumb.webp';
 
 import proj1Svg from './assets/projects/cottson-clothing-hq.webp';
 import proj2Svg from './assets/projects/commongrounds-hq.webp';
@@ -56,8 +58,8 @@ export default function BrandProjectsSection({ web = false }) {
               <div className="bp-card" onClick={() => handleCardClick(projDataCirclesSvg)} style={{ cursor: 'pointer' }}><img src={dataCirclesLaptop} alt="DataCircles Laptop" /></div>
               <div className="bp-card" onClick={() => handleCardClick(projDataCirclesSvg)} style={{ cursor: 'pointer' }}><img src={dataCirclesPhone} alt="DataCircles Mobile" /></div>
               
-              <div className="bp-card" onClick={() => handleCardClick(facilitiesImg)} style={{ cursor: 'pointer' }}><img src={facilitiesImg} alt="Facilities Tours and Travels" /></div>
-              <div className="bp-card" onClick={() => handleCardClick(projQodenextSvg)} style={{ cursor: 'pointer' }}><img src={img2} alt="Qodenext" /></div>
+              <div className="bp-card" onClick={() => handleCardClick(facilitiesImg)} style={{ cursor: 'pointer' }}><img src={facilitiesWeb} alt="Facilities Tours and Travels" /></div>
+              <div className="bp-card" onClick={() => handleCardClick(projQodenextSvg)} style={{ cursor: 'pointer' }}><img src={qodenextWeb} alt="Qodenext" /></div>
               <div className="bp-card" onClick={() => handleCardClick(proj1Svg)} style={{ cursor: 'pointer' }}><img src={cottsonWeb} alt="Cottson Clothing" /></div>
             </>
           ) : (
