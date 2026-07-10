@@ -13,7 +13,7 @@ import img7 from './assets/project-7.png';
 import img8 from './assets/last-project.png'; 
 
 import nittyGrittyWeb from './assets/nitty_gritty_desktop_black_1.png';
-import dataCirclesLaptop from './assets/DataCirclesLaptop.webp';
+import dataCirclesLaptop from './assets/datacircles_square.png';
 import dataCirclesPhone from './assets/DataCircles_web.webp';
 import facilitiesWeb from './assets/facilities-tours.png';
 import qodenextWeb from './assets/QodenextImage.webp';
