@@ -30,8 +30,14 @@
   height: 100%;
   z-index: 1;
   /* Match the gradient fade out */
-  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+
+.services-hero-bg-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .ws-hero-content {
@@ -815,15 +821,19 @@
 
 @media (max-width: 768px) {
   /* Hero */
+  .ws-hero-wrap {
+    padding: 10px 12px 0;
+  }
   .ws-hero-card {
-    min-height: 68vh;
+    height: calc(100vh - 20px);
+    border-radius: 16px;
   }
   .ws-hero-title {
     font-size: clamp(2rem, 8vw, 2.75rem);
     line-height: 1.15;
   }
   .ws-hero-content {
-    padding: 0 20px;
+    padding: 70px 20px 0;
   }
 
   /* Section spacing: section provides the side padding, inner drops its 40px.
