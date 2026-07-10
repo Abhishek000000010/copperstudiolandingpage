@@ -475,6 +475,25 @@
   flex-shrink: 0;
 }
 
+@media (max-width: 1024px) {
+  .bs-desc {
+    margin-bottom: 80px;
+  }
+  .bs-subsection {
+    margin-bottom: 60px;
+  }
+  .bs-section-divider {
+    margin-bottom: 60px;
+  }
+  .bs-sub-title {
+    font-size: 28px;
+  }
+  .bs-sub-desc {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+}
+
 @media (max-width: 900px) {
   .bs-medium-card {
     width: 60%;
