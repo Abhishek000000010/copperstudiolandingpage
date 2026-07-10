@@ -14,7 +14,8 @@
   min-height: max(calc(100vh - 32px), 900px);
   border-radius: 24px;
   overflow: hidden;
-  background-color: transparent; /* Removed dark background to fix edge bleed on zoom */
+  background-color: transparent;
+  /* Removed dark background to fix edge bleed on zoom */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -140,15 +141,16 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0 52px; /* Balanced padding on left and right */
-  margin: 0 80px 80px 80px;
+  padding: 0 52px;
+  /* Balanced padding on left and right */
+  margin: 0 18px 80px 18px;
   height: 180px;
   background: rgba(7, 8, 21, 0.15);
-  border: 2px solid #FFFFFF;
-  border-radius: 15px;
+  border: none;
+  border-radius: 0;
   position: relative;
   z-index: 10;
-  backdrop-filter: blur(20px);
+  backdrop-filter: none;
 }
 
 .bl-trusted-text {
@@ -164,8 +166,10 @@
 }
 
 .bl-trusted-logos-viewport {
-  flex: 1; /* Take up the rest of the card width */
-  margin-left: 40px; /* Space between text and logos */
+  flex: 1;
+  /* Take up the rest of the card width */
+  margin-left: 40px;
+  /* Space between text and logos */
   overflow: hidden;
   /* Fade edges so logos cleanly disappear before hitting the text */
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
@@ -175,14 +179,22 @@
 .bl-trusted-logos-track {
   display: flex;
   align-items: center;
-  gap: 60px; /* Spacing between logos */
+  gap: 60px;
+  /* Spacing between logos */
   width: max-content;
   animation: blScrollMarquee 25s linear infinite;
 }
 
 @keyframes blScrollMarquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-50% - 30px)); } /* Shift exactly half the track width (including the gap between sets) */
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-50% - 30px));
+  }
+
+  /* Shift exactly half the track width (including the gap between sets) */
 }
 
 .bl-trusted-logo-img {
@@ -192,12 +204,32 @@
 }
 
 /* Individual Logo Overrides for Custom Sizing */
-.bl-trusted-logo-img.logo-1 { max-width: 65px; }
-.bl-trusted-logo-img.logo-2 { max-width: 75px; }
-.bl-trusted-logo-img.logo-3 { max-width: 115px; }
-.bl-trusted-logo-img.logo-4 { max-width: 75px; }
-.bl-trusted-logo-img.logo-dc { max-width: 110px; } /* Example: slightly larger for DataCircles */
-.bl-trusted-logo-img.logo-nitty { max-width: 110px; } /* Example: wider for Nitty Gritty text */
+.bl-trusted-logo-img.logo-1 {
+  max-width: 65px;
+}
+
+.bl-trusted-logo-img.logo-2 {
+  max-width: 75px;
+}
+
+.bl-trusted-logo-img.logo-3 {
+  max-width: 115px;
+}
+
+.bl-trusted-logo-img.logo-4 {
+  max-width: 75px;
+}
+
+.bl-trusted-logo-img.logo-dc {
+  max-width: 110px;
+}
+
+/* Example: slightly larger for DataCircles */
+.bl-trusted-logo-img.logo-nitty {
+  max-width: 110px;
+}
+
+/* Example: wider for Nitty Gritty text */
 
 /* Studio Belief Overrides for Brand Landing Page */
 .brand-landing-page .studio-belief {
@@ -210,7 +242,8 @@
 .brand-landing-page .studio-belief .belief-quote {
   font-size: 24px;
   line-height: 1.5;
-  max-width: 100%; /* Allows it to span full container width, touching right side */
+  max-width: 100%;
+  /* Allows it to span full container width, touching right side */
   margin: 0 0 60px 0;
   text-align: center;
   text-align-last: center;
@@ -237,7 +270,8 @@
   background: #070815 !important;
   border-radius: 25px;
   overflow: hidden;
-  margin-bottom: 40px; /* spacing before Wall of Love */
+  margin-bottom: 40px;
+  /* spacing before Wall of Love */
 }
 
 .bl-pricing-wrapper .pricing-title,
@@ -295,7 +329,7 @@
 /* ------------------------------------------------------------------ */
 @media (max-width: 768px) {
   .bl-hero-wrapper {
-    padding: 10px;
+    padding: 10px 0 0 0;
   }
 
   .brand-landing-hero {
@@ -345,8 +379,9 @@
     justify-content: center;
     gap: 20px;
     padding: 24px 20px;
-    margin: 0 16px 24px 16px;
+    margin: 24px 0 20px 0;
     height: auto;
+    border-radius: 0;
   }
 
   .bl-trusted-text {
@@ -370,9 +405,18 @@
     max-width: 60px;
     max-height: 60px;
   }
-  .bl-trusted-logo-img.logo-3 { max-width: 90px; }
-  .bl-trusted-logo-img.logo-dc { max-width: 85px; }
-  .bl-trusted-logo-img.logo-nitty { max-width: 85px; }
+
+  .bl-trusted-logo-img.logo-3 {
+    max-width: 90px;
+  }
+
+  .bl-trusted-logo-img.logo-dc {
+    max-width: 85px;
+  }
+
+  .bl-trusted-logo-img.logo-nitty {
+    max-width: 85px;
+  }
 
   /* Belief section */
   .brand-landing-page .studio-belief {
@@ -409,5 +453,15 @@
 
   .bl-trusted-text {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .bl-hero-wrapper {
+    padding: 10px 0 0 0;
+  }
+
+  .bl-trusted-banner-glass {
+    margin: 24px 0 20px 0;
   }
 }

@@ -141,14 +141,14 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 52px; /* Balanced padding on left and right */
-  margin: 0 80px 80px 80px;
+  margin: 0 18px 80px 18px;
   height: 180px;
   background: rgba(7, 8, 21, 0.15);
-  border: 2px solid #FFFFFF;
-  border-radius: 15px;
+  border: none;
+  border-radius: 0;
   position: relative;
   z-index: 10;
-  backdrop-filter: blur(20px);
+  backdrop-filter: none;
 }
 
 .bl-trusted-text {
@@ -295,7 +295,7 @@
 /* ------------------------------------------------------------------ */
 @media (max-width: 768px) {
   .bl-hero-wrapper {
-    padding: 10px;
+    padding: 10px 0 0 0;
   }
 
   .brand-landing-hero {
@@ -345,8 +345,9 @@
     justify-content: center;
     gap: 20px;
     padding: 24px 20px;
-    margin: 0 16px 24px 16px;
+    margin: 24px 0 20px 0;
     height: auto;
+    border-radius: 0;
   }
 
   .bl-trusted-text {
@@ -409,5 +410,15 @@
 
   .bl-trusted-text {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .bl-hero-wrapper {
+    padding: 10px 0 0 0;
+  }
+
+  .bl-trusted-banner-glass {
+    margin: 24px 0 20px 0;
   }
 }
