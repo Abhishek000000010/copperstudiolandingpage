@@ -486,6 +486,7 @@
   }
   .bs-hero-content {
     padding: 0 20px;
+    transform: translateY(-24px);
   }
 
   /* Section spacing: section provides the side padding, inner drops its 40px.
