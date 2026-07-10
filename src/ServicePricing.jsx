@@ -41,7 +41,8 @@ const ServicePricing = ({ activeService, onServiceChange, showToggle = true, hid
                 <>
                   <p className="pricing-subtitle-italic">Find The Perfect Website Package For Your Brand</p>
                   <p className="pricing-subtitle">
-                    Every business has different needs. Explore our website packages to find the right combination of design, development, and ongoing support for your brand.
+                    Every business has different needs. Explore our website packages to find the right combination of<br/>
+                    design, development, and ongoing support for your brand.
                   </p>
                 </>
               ) : (

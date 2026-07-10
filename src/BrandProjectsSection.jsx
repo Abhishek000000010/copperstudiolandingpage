@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import './BrandProjectsSection.css';
 import './ProjectsSection.css';
 //images "Take A Look At What We Have Created!" 
-import img1 from './assets/image.webp';
+import img1 from './assets/cottson_thumbnail.jpg';
 import img2 from './assets/QodenextImage.webp';
-import img3 from './assets/nittygritty21.png';
+import commonGroundsMenu from './assets/common_grounds_menu.png';
 import img4 from './assets/common-grounds.webp';
 import img5 from './assets/project-4.png';
 import img6 from './assets/project-6.png'; 
@@ -68,7 +68,7 @@ export default function BrandProjectsSection({ web = false }) {
               {/* Top Row */}
               <div className="bp-card" onClick={() => handleCardClick(proj1Svg)} style={{ cursor: 'pointer' }}><img src={img1} alt="Project 1" /></div>
               <div className="bp-card" onClick={() => handleCardClick(projQodenextSvg)} style={{ cursor: 'pointer' }}><img src={img2} alt="Project 2" /></div>
-              <div className="bp-card" onClick={() => handleCardClick(projNittyGritty)} style={{ cursor: 'pointer' }}><img src={img3} alt="Project 3" /></div>
+              <div className="bp-card" onClick={() => handleCardClick(proj2Svg)} style={{ cursor: 'pointer' }}><img src={commonGroundsMenu} alt="Common Grounds Menu" /></div>
               
               {/* Bottom Row */}
               <div className="bp-card" onClick={() => handleCardClick(proj2Svg)} style={{ cursor: 'pointer' }}><img src={img4} alt="Project 4" /></div>

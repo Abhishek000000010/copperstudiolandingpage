@@ -30,6 +30,17 @@ const getLogo = (suffix) => {
 function ServicesPage() {
   const [pricingService, setPricingService] = useState('brand');
 
+  const handleCalendlyPopup = (e) => {
+    e.preventDefault();
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({
+        url: 'https://calendly.com/thecopperstudio/30min?hide_gdpr_banner=1&hide_event_type_details=1&hide_landing_page_details=1'
+      });
+    } else {
+      window.open('https://calendly.com/thecopperstudio/30min', '_blank');
+    }
+  };
+
   return (
     <>
       <Navbar activeSection="services" />
@@ -94,7 +105,7 @@ function ServicesPage() {
               <p className="custom-req-desc">Not every brand fits into a package. If you're looking for specific services, have custom requirements, or need support for a particular project, we'll build a solution designed around your goals.</p>
             </div>
             <div className="custom-req-action reveal-up" style={{ transitionDelay: '200ms' }}>
-              <button className="book-meeting-btn" onClick={() => window.location.href = '#contact'}>Book A Meeting</button>
+              <button className="book-meeting-btn" onClick={handleCalendlyPopup}>Book A Meeting</button>
             </div>
           </div>
 

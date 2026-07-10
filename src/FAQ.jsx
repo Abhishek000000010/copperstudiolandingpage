@@ -24,6 +24,17 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
 const FAQ = ({ label = 'HAVE SOME DOUBTS?' }) => {
   const [openIndex, setOpenIndex] = useState(0);
 
+  const handleCalendlyPopup = (e) => {
+    e.preventDefault();
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({
+        url: 'https://calendly.com/thecopperstudio/30min?hide_gdpr_banner=1&hide_event_type_details=1&hide_landing_page_details=1'
+      });
+    } else {
+      window.open('https://calendly.com/thecopperstudio/30min', '_blank');
+    }
+  };
+
   const faqData = [
     {
       question: "What service does Copper Studio offer?",
@@ -56,7 +67,7 @@ const FAQ = ({ label = 'HAVE SOME DOUBTS?' }) => {
           <p className="faq-description">
             Everything you need to know about our design, branding and web development processes. Can't find the answer you're looking for? Reach out to our team directly.
           </p>
-          <a href="#contact" className="faq-contact-link">
+          <a href="#" onClick={handleCalendlyPopup} className="faq-contact-link">
             <span>Get in Touch</span>
             <span className="faq-contact-icon">
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
