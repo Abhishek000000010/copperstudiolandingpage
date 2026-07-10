@@ -835,6 +835,12 @@
   .ws-hero-content {
     padding: 70px 20px 0;
   }
+  .ws-hero-bg .svg-blob-blue {
+    transform: translate(280px, 0);
+  }
+  .ws-hero-bg .svg-blob-orange {
+    transform: translate(-280px, 0);
+  }
 
   /* Section spacing: section provides the side padding, inner drops its 40px.
      box-sizing keeps the 100%-wide sections from overflowing once padding is added. */
