@@ -170,6 +170,8 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     padding: 40px 32px 30px;
     height: auto;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .booking-title {
@@ -191,13 +193,14 @@
   }
 
   .booking-widget {
-    padding: 20px;
+    padding: 20px 20px 16px;
     height: auto;
     display: block;
   }
 
   .calendly-inline-widget-wrapper {
-    height: 680px;
+    height: 600px;
+    min-height: 600px;
   }
 }
 
@@ -215,7 +218,7 @@
   }
 
   .booking-widget {
-    padding: 10px;
+    padding: 10px 10px 16px;
     height: auto;
     display: block;
   }
@@ -231,26 +234,24 @@
     margin-bottom: 12px;
   }
 
-  .booking-widget {
-    padding: 12px;
-  }
-
   .calendly-inline-widget-wrapper {
-    height: 500px;
+    height: 620px;
+    min-height: 620px;
   }
 }
 
 @media (max-width: 480px) {
   .booking-info {
-    padding: 30px 20px 16px;
+    padding: 30px 20px 18px;
   }
 
   .booking-widget {
-    padding: 8px;
+    padding: 8px 8px 16px;
   }
 
   .calendly-inline-widget-wrapper {
-    height: 480px;
+    height: 650px;
+    min-height: 650px;
   }
 }
 
@@ -288,13 +289,6 @@
     height: 680px;
     min-height: 680px;
     overflow: visible;
-  }
-
-  .calendly-inline-widget-wrapper iframe {
-    width: 100% !important;
-    height: 100% !important;
-    border: 0;
-    display: block;
   }
 }
 
