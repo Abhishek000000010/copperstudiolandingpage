@@ -489,13 +489,24 @@
   .bs-hero-card {
     height: calc(100vh - 20px);
     border-radius: 16px;
+    background: radial-gradient(circle at 80% 30%, rgba(197, 84, 24, 0.6) 0%, rgba(70, 134, 183, 0.25) 50%, #070815 100%) !important;
   }
   .bs-hero-title {
     font-size: clamp(2rem, 8vw, 2.75rem);
     line-height: 1.15;
+    color: #FFFFFF !important;
   }
   .bs-hero-content {
-    padding: 70px 20px 0;
+    padding: 0 20px;
+  }
+  .bs-hero-bg .svg-stripe-1,
+  .bs-hero-bg .svg-stripe-3,
+  .bs-hero-bg .svg-stripe-5,
+  .bs-hero-bg .svg-stripe-7,
+  .bs-hero-bg .svg-stripe-9,
+  .bs-hero-bg .svg-stripe-11,
+  .bs-hero-bg .svg-stripe-13 {
+    display: none !important;
   }
 
   /* Section spacing: section provides the side padding, inner drops its 40px.
